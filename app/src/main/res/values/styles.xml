@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <item name="colorPrimary">@color/Black</item>
+        <item name="colorPrimaryDark">@color/Black</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@drawable/tab_text_color</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/border_color</item>
+        <item name="colorControlActivated">@color/OrangeRed</item>
+    </style>
+
+</resources>

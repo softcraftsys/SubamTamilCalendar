@@ -1,0 +1,183 @@
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/notication_adview"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_above="@id/notication_adview"
+        android:id="@+id/coOrdinatorLaout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:contentInsetEnd="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <RelativeLayout
+                    android:background="@color/OrangeRed"
+                    android:id="@+id/songs_header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.81"
+                    android:elevation="3dp">
+
+                    <ImageView
+                        android:id="@+id/news_imgback_click"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_left" />
+
+                    <TextView
+                        android:id="@+id/songsPage_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
+                        android:layout_toRightOf="@id/news_imgback_click"
+                        android:text="@string/devotional_head"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/shareImg"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/share_ic"
+                        android:contentDescription="TODO" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+            <!--<View-->
+                <!--android:id="@+id/line"-->
+                <!--android:background="#b57a52"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp" />-->
+            <!--<View-->
+                <!--android:id="@+id/lines1"-->
+                <!--android:background="#9f8471"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp" />-->
+            <!--<View-->
+                <!--android:id="@+id/lines2"-->
+                <!--android:background="#baa598"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp" />-->
+            <!--<View-->
+                <!--android:id="@+id/lines3"-->
+                <!--android:background="@color/light_orange"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp" />-->
+
+            <ImageView
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:visibility="visible"
+                android:id="@+id/WelcomeImage"
+                android:background="#cc0000"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                app:tabTextColor="@color/white"
+                app:tabSelectedTextColor="@color/Bisque"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/OrangeRed"
+                app:tabGravity="fill"/>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.viewpager.widget.ViewPager
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/viewpager"
+            android:background="#FBE9E7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
+        android:clickable="true"
+        android:backgroundTint="@color/OrangeRed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />--><!--  android:src="@drawable/ic_ply"-->
+
+   <!-- <com.softcraft.calendar.fab.FloatingActionButton
+        android:id="@+id/fabPlayPause"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_ply"
+        />-->
+
+    <RelativeLayout
+        android:id="@+id/fabPlayPause"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circle_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/notication_adview"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/playImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_ply" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</RelativeLayout>

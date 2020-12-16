@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/heading_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/OrangeRed"
+                android:elevation="3dp">
+
+                <ImageView
+                    android:id="@+id/click_back_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_left" />
+
+                <TextView
+                    android:id="@+id/show_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/click_back_image"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/shareImg"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/share_ic_new" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/recycler_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/adview"
+                android:layout_below="@+id/heading_layout">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cardview_light_background" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/adview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+
+
+
+
+
+

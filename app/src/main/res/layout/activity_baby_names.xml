@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/notification_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/notification_adview"
+        android:background="@color/White">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_orange">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.81"
+                    android:background="@color/OrangeRed"
+                    android:elevation="3dp">
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_left"
+                        android:contentDescription="TODO" />
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/back_arrow"
+                        android:layout_toRightOf="@+id/back_arrow"
+                        android:text="@string/baby_names"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/shareImg"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/share_ic"
+                        android:contentDescription="TODO" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#b57a52"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#9f8471"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#baa598"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_orange"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RelativeLayout
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/spinner_background">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:layout_margin="2dp"
+                            android:id="@+id/maleFemaleSpin"
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+                            android:backgroundTint="@color/OrangeRed"
+                            android:spinnerMode="dropdown"
+                            android:textAlignment="center">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:background="@drawable/spinner_background"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:backgroundTint="@color/OrangeRed"
+                            android:layout_margin="2dp"
+                            android:id="@+id/religionSpin"
+                            android:layout_width="100dp"
+                            android:layout_height="35dp"
+                            android:spinnerMode="dropdown"
+                            android:textAlignment="center">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:padding="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/alphabetSpin"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/spinner_background">
+
+                        <TextView
+                            android:id="@+id/alphabetTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/Black" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/getnameLayout"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rounded_corner_update_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:id="@+id/getNamesTv"
+                    android:text="Get"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#baa598"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_orange"
+                app:layout_scrollFlags="scroll|enterAlways" />
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:id="@+id/backgroundGridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <GridView
+                    android:id="@+id/babyNamesGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_background"
+                    android:numColumns="4"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp">
+
+                </GridView>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_grey_selected" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/babyNamesRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="natchathiram_array">
+       <!-- <item>தேர்வு செய்க</item>-->
+        <item> மணமகன் நட்சத்திரம் </item>
+        <item>அசுவினி</item>
+        <item>பரணி</item>
+        <item>கிருத்திகை</item>
+        <item>ரோகிணி</item>
+        <item>மிருகசீர்ஷம்</item>
+        <item>திருவாதிரை</item>
+        <item>புனர்பூசம்</item>
+        <item>பூசம்</item>
+        <item>ஆயில்யம்</item>
+        <item>மகம்</item>
+        <item>பூரம்</item>
+        <item>உத்திரம்</item>
+        <item>அஸ்தம்</item>
+        <item>சித்திரை</item>
+        <item>சுவாதி</item>
+        <item>விசாகம்</item>
+        <item>அனுஷம்</item>
+        <item>கேட்டை</item>
+        <item>மூலம்</item>
+        <item>பூராடம்</item>
+        <item>உத்திராடம்</item>
+        <item>திருவோணம்</item>
+        <item>அவிட்டம்</item>
+        <item>சதயம்</item>
+        <item>பூரட்டாதி</item>
+        <item>உத்திரட்டாதி</item>
+        <item>ரேவதி</item>
+    </string-array>
+
+
+    <string-array name="natchathiram_array1">
+        <!-- <item>தேர்வு செய்க</item>-->
+        <item> மணமகள் நட்சத்திரம் </item>
+        <item>அசுவினி</item>
+        <item>பரணி</item>
+        <item>கிருத்திகை</item>
+        <item>ரோகிணி</item>
+        <item>மிருகசீர்ஷம்</item>
+        <item>திருவாதிரை</item>
+        <item>புனர்பூசம்</item>
+        <item>பூசம்</item>
+        <item>ஆயில்யம்</item>
+        <item>மகம்</item>
+        <item>பூரம்</item>
+        <item>உத்திரம்</item>
+        <item>அஸ்தம்</item>
+        <item>சித்திரை</item>
+        <item>சுவாதி</item>
+        <item>விசாகம்</item>
+        <item>அனுஷம்</item>
+        <item>கேட்டை</item>
+        <item>மூலம்</item>
+        <item>பூராடம்</item>
+        <item>உத்திராடம்</item>
+        <item>திருவோணம்</item>
+        <item>அவிட்டம்</item>
+        <item>சதயம்</item>
+        <item>பூரட்டாதி</item>
+        <item>உத்திரட்டாதி</item>
+        <item>ரேவதி</item>
+    </string-array>
+
+    <string-array name="porutham_array">
+        <item>திருமணப் பொருத்தம் சுத்தமாக இல்லை.</item>
+        <item>திருமணப் பொருத்தம் இல்லை.</item>
+        <item>திருமணப் பொருத்தம் அவ்வளவு திருப்திகரமாக அமையவில்லை. எனினும் ஜாதகம் சுத்த ஜாதகமாக இருந்தால் மற்ற கிரக அமைப்புகளைக் கொண்டு திருமணம் செய்யலாம்.</item>
+        <item>திருமணப் பொருத்தம் அவ்வளவு திருப்திகரமாக அமையவில்லை. எனினும் ஜாதகம் சுத்த ஜாதகமாக இருந்தால் மற்ற கிரக அமைப்புகளைக் கொண்டு திருமணம் செய்யலாம்.</item>
+        <item>திருமணப் பொருத்தம் ஐம்பது சதவீதம் நன்றாக உள்ளது.</item>
+        <item>திருமணப் பொருத்தம் அறுவது சதவீதம் நன்றாக உள்ளது.</item>
+        <item>திருமணப் பொருத்தம் எழுவது சதவீதம் நன்றாக உள்ளது.</item>
+        <item>திருமணப் பொருத்தம் எண்பது சதவீதம் நன்றாக உள்ளது.</item>
+        <item>திருமணப் பொருத்தம் நன்றாகப் பொருந்தி வருகிறது.</item>
+        <item>திருமணப் பொருத்தம் மிகவும் அற்புதமாக உள்ளது.</item>
+    </string-array>
+    <string-array name="raasi_array">
+       <!-- <item>தேர்வு செய்க</item>-->
+        <item> மணமகள் ராசி </item>
+        <item>மேஷம்</item>
+        <item>ரிஷபம்</item>
+        <item>மிதுனம்</item>
+        <item>கடகம்</item>
+        <item>சிம்மம்</item>
+        <item>கன்னி</item>
+        <item>துலாம்</item>
+        <item>விருச்சிகம்</item>
+        <item>தனுசு</item>
+        <item>மகரம்</item>
+        <item>கும்பம்</item>
+        <item>மீனம்</item>
+    </string-array>
+
+    <string-array name="raasi_array1">
+       <!-- <item>தேர்வு செய்க</item>-->
+        <item>  மணமகன் ராசி </item>
+        <item>மேஷம்</item>
+        <item>ரிஷபம்</item>
+        <item>மிதுனம்</item>
+        <item>கடகம்</item>
+        <item>சிம்மம்</item>
+        <item>கன்னி</item>
+        <item>துலாம்</item>
+        <item>விருச்சிகம்</item>
+        <item>தனுசு</item>
+        <item>மகரம்</item>
+        <item>கும்பம்</item>
+        <item>மீனம்</item>
+    </string-array>
+
+</resources>

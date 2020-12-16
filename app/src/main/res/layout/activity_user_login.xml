@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.softcraft.calendar.Activity.UserLoginActivity">
+
+    <!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:id="@+id/adview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:visibility="gone">-->
+    <!--</LinearLayout>-->
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.81"
+                    android:background="@color/OrangeRed"
+                    android:elevation="3dp">
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_left" />
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/back_arrow"
+                        android:layout_toRightOf="@+id/back_arrow"
+                        android:text="@string/user_login_title"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+            <RelativeLayout
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/socialLoginLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/connectWithLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="60dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/light_orange" />
+
+                        <TextView
+                            android:id="@+id/connectWithTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_vertical"
+                            android:text="Login With"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="60dp"
+                            android:layout_height="1.5dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/light_orange" />
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/connectWithLayout"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp">
+
+                        <!--<com.facebook.login.widget.LoginButton-->
+                        <!--android:visibility="gone"-->
+                        <!--android:id="@+id/login_button"-->
+                        <!--android:layout_width="210dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_marginLeft="30dp"-->
+                        <!--android:layout_marginRight="30dp"-->
+                        <!--android:paddingBottom="10dp"-->
+                        <!--android:paddingTop="10dp" />-->
+
+                        <com.facebook.login.widget.LoginButton
+                            android:visibility="visible"
+                            android:id="@+id/connectWithFbButton"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="  connect_with_facebook" />
+
+                        <RelativeLayout
+                            android:id="@+id/googleBtnlayout"
+                            android:background="@drawable/google_background"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/connectWithFbButton"
+                            android:layout_width="180dp"
+                            android:layout_height="30dp">
+
+
+                            <ImageView
+                                android:visibility="visible"
+                                android:id="@+id/googleBtn"
+                                android:layout_width="22dp"
+                                android:layout_centerVertical="true"
+                                android:layout_height="22dp"
+                                android:layout_marginLeft="7dp"
+                                android:src="@drawable/google_ic" />
+
+                            <TextView
+                                android:textSize="14dp"
+                                android:text="Google+"
+                                android:textStyle="bold"
+                                android:layout_centerInParent="true"
+                                android:textColor="@color/white"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/socialLoginLayout"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/orTv"
+                    android:text="(or)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@id/socialLoginLayout"
+                    android:id="@+id/userLoginViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

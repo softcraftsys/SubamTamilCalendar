@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_marriage_match_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_above="@id/adview"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/adb_marriage_match"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/OrangeRed"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="TODO"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/show_title_aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="திருமணப் பொருத்தம்"
+            android:layout_toRightOf="@id/backImg"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/shareImg"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/share_ic"
+            android:contentDescription="TODO" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:id="@+id/scrollView_marriage_match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tbl_root_marriage_match_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="vertical"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_thirumana_porutham_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_span="2"
+                        android:gravity="center"
+
+                        android:padding="10dp"
+                        android:text="@string/txt_thirumana_porutham_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/raasi_spinner_bg">
+
+                        <TextView
+                            android:id="@+id/txt_female_raasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/rta_female_raasi"
+                            android:textColor="#817c72"
+                            android:visibility="gone" />
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="3dp"
+                            android:src="@drawable/boyimg" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="fill_horizontal"
+                            android:layout_weight="1">
+                            <Spinner
+                                android:id="@+id/spinner_male_raasi"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@android:color/transparent"
+                                android:entries="@array/raasi_array1"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="6dp" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_column="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/raasi_spinner_bg1">
+
+                        <TextView
+                            android:id="@+id/txt_female_natchathira"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/rta_female_natchathiram"
+                            android:textColor="#817c72"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/girlimg" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="fill_horizontal">
+                            <Spinner
+                                android:id="@+id/spinner_female_raasi"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@android:color/transparent"
+                                android:entries="@array/raasi_array"
+                                android:paddingLeft="35dp"
+                                android:paddingRight="6dp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="7dp"
+                    android:background="@color/grey" />
+
+                <TableRow
+                    android:layout_height="0dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_column="0"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/raasi_spinner_bg">
+
+                        <TextView
+                            android:id="@+id/txt_male_raasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:entries="@array/raasi_array"
+                            android:gravity="center"
+                            android:text="@string/rta_male_raasi"
+                            android:textColor="#817c72"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="3dp"
+                            android:src="@drawable/boyimg" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="fill_horizontal">
+                            <Spinner
+                                android:id="@+id/spinner_male_natchathiram"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@android:color/transparent"
+                                android:entries="@array/natchathiram_array"
+                                android:gravity="right"
+                                android:paddingLeft="6dp"
+                                android:paddingRight="19dp" />
+                            <!--
+                            android:layout_below="@+id/txt_male_raasi"-->
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_column="1"
+                        android:layout_gravity="fill_horizontal"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/raasi_spinner_bg1">
+
+                        <TextView
+                            android:id="@+id/txt_male_natchathiram"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/rta_male_natchathiram"
+                            android:textColor="#817c72"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="3dp"
+                            android:src="@drawable/girlimg" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="fill_horizontal">
+
+
+                            <Spinner
+                                android:id="@+id/spinner_female_natchathiram"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:background="@android:color/transparent"
+                                android:entries="@array/natchathiram_array1"
+                                android:paddingLeft="35dp"
+                                android:paddingRight="6dp" />
+                            <!-- android:layout_below="@+id/txt_male_natchathiram "-->
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/orange_bg">
+
+                        <Button
+                            android:id="@+id/btn_submit"
+                            android:layout_width="150dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@android:color/transparent"
+android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="@string/btn_submit_porutham"
+                            android:textColor="@color/white"/>
+
+
+                        <Button
+                            android:id="@+id/btn_tips"
+                            android:layout_width="130dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@android:color/transparent"
+                            android:onClick="showThirumanaPoruthamTips"
+                            android:text="@string/btn_thirumana_porutham_tips"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/circleMarkLayout"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_mrg_mark">
+
+
+                        <View
+                            android:id="@+id/mrkCircleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/white" />
+
+                        <TextView
+                            android:id="@+id/numporuthmTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/mrkCircleView"
+                            android:layout_gravity="center"
+                            android:layout_span="2"
+                            android:gravity="bottom|center_horizontal"
+                            android:text="5"
+                            android:textColor="@color/white"
+                            android:textSize="27sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/totalnumporuthmTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/mrkCircleView"
+                            android:gravity="top|center_horizontal"
+                            android:text="10"
+                            android:textColor="@color/white"
+                            android:textSize="27sp"
+                            android:textStyle="bold|italic" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grey" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_span="2"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="?attr/colorPrimaryDark"
+                        android:textSize="15sp" />
+                </TableRow>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/grey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                <RelativeLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/poruthamTV1"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+
+                            android:background="@drawable/porutham_bg"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="தினப் பொருத்தம்"
+                            android:textColor="@color/Black" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/poruthamImg1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/porutham_bg"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:src="@drawable/red_tick"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/poruthamTV2"
+                            android:layout_width="130dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/porutham_bg"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:text="@string/gana_porutham"
+                            android:textColor="@color/Black" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/poruthamImg2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/porutham_bg"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:src="@drawable/red_tick"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV3"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/mahendhra_porutham"
+                                android:textColor="@color/Black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg3"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV4"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/sthreega_porutham"
+                                android:textColor="@color/Black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg4"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV5"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="யோனிப்"
+                                android:textColor="@color/Black" />
+                            <!--யோனிப் பொருத்தம்-->
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg5"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV6"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/raasi_porutham"
+                                android:textColor="@color/Black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg6"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV7"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/raasi_adhipadthi_porutham"
+                                android:textColor="@color/Black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg7"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV8"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/vasiya_porutham"
+                                android:textColor="@color/Black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg8"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV9"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/rajju_porutham"
+                                android:textColor="@color/Black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg9"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/poruthamTV10"
+                                android:layout_width="130dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="@string/vedhai_porutham"
+                                android:textColor="@color/Black" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/poruthamImg10"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/porutham_bg"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:src="@drawable/red_tick"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/poruthambox1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+
+
+                    <TextView
+                        android:id="@+id/dhinaPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:text="@string/dhina_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dhinaPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/dhinaPorutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/dhina_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/ganaPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+
+                        android:padding="10dp"
+                        android:text="@string/gana_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ganaPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/gana_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/gana_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/mahendhraPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+
+                        android:padding="10dp"
+                        android:text="@string/mahendhra_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mahendhraPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/mahendhra_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/mahendhra_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/stheegaPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:text="@string/sthreega_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/sthreegaPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/sthreega_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/sthreega_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/yoniPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:text="@string/yoni_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/yoniPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/yoni_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/yoni_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/raasiPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:padding="10dp"
+                        android:layout_centerInParent="true"
+                        android:text="@string/raasi_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/raasiPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/raasi_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/raasi_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox7"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/raasiAdhipathiPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_column="0"
+                        android:padding="10dp"
+                        android:text="@string/raasi_adhipadthi_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/raasiAdhipathiPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/raasi_adhipadthi_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/raasi_adhipadthi_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox8"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/vasiyaPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:text="@string/vasiya_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vasiyaPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/vasiya_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/vasiya_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/poruthambox9"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+
+                    <TextView
+                        android:id="@+id/rajjuPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:text="@string/rajju_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/rajjuPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/rajju_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/rajju_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <RelativeLayout
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/porutham_border_bg"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/poruthambox10"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="0.1dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/redporutham"/>
+                    <TextView
+                        android:id="@+id/vedhaiPorutham"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:text="@string/vedhai_porutham"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vedhaiPoruthamResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/vedhai_porutham_vilakkam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_span="2"
+                        android:text="@string/vedhai_porutham_vilakkam"
+                        android:textColor="?attr/colorPrimaryDark" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/layout_sudhakar_share"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+
+                        android:gravity="left"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/menu_icon_click" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:gravity="left"
+                            android:text="@string/share_message"
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+        <ImageButton
+            android:id="@+id/btn_general_share"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+
+            android:onClick="onShareMarriageMatch"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btn_whatsapp_share"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_above="@+id/btn_general_share"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:onClick="onShareMarriageMatch"
+            android:visibility="gone" />  <!--
+            android:src="@drawable/sharefab"-->
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</RelativeLayout>

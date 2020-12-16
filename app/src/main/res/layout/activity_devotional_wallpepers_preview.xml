@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/notification_adview"
+        android:background="@color/White">
+
+        <!--<android.support.design.widget.AppBarLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/OrangeRed">-->
+
+            <!--<android.support.v7.widget.Toolbar-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:contentInsetEnd="0dp"-->
+                <!--android:contentInsetLeft="0dp"-->
+                <!--android:contentInsetRight="0dp"-->
+                <!--android:contentInsetStart="0dp"-->
+                <!--app:contentInsetEnd="0dp"-->
+                <!--app:contentInsetLeft="0dp"-->
+                <!--app:contentInsetRight="0dp"-->
+                <!--app:contentInsetStart="0dp"-->
+                <!--app:layout_scrollFlags="scroll|enterAlways">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_weight="0.81"-->
+                    <!--android:background="@color/OrangeRed"-->
+                    <!--android:elevation="3dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/back_arrow"-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:src="@drawable/arrow_left" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/title_header"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_toEndOf="@+id/back_arrow"-->
+                        <!--android:layout_toRightOf="@+id/back_arrow"-->
+                        <!--android:text="DevotionalWallpapers"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="18sp" />-->
+                <!--</RelativeLayout>-->
+
+            <!--</android.support.v7.widget.Toolbar>-->
+
+        <!--</android.support.design.widget.AppBarLayout>-->
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:background="@color/Black"
+            android:id="@+id/WallPrevPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/wallMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/wallpaperTopBarLayout"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@color/OrangeRed"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="0.81"
+            android:background="@color/OrangeRed"
+            android:elevation="3dp">
+
+            <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_left" />
+
+            <TextView
+            android:id="@+id/title_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/back_arrow"
+            android:layout_toRightOf="@+id/back_arrow"
+            android:text="Devotional Wallpapers"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:background="@color/OrangeRed"
+            android:visibility="visible"
+            android:id="@+id/downLoadAndSetWallLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+        <RelativeLayout
+            android:background="@drawable/download_setwall_layout"
+            android:id="@+id/downloadImageLayout"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14dp"
+                android:layout_margin="5dp"
+                android:id="@+id/downloadImageTv"
+                android:text="Download"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@drawable/download_setwall_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/setWallImageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14dp"
+                android:layout_margin="5dp"
+                android:id="@+id/setAsWallpaperTv"
+                android:text="Set as wallpaper"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_cyclic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ProgressBar
+        android:id="@+id/progressBar_percentage"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="25"
+        android:layout_centerInParent="true"
+        android:progressDrawable="@drawable/percentage_progressbar"
+        android:secondaryProgress="100"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/percentageTv"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:text="0%"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+

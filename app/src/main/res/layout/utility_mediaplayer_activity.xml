@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/media_background">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_above="@+id/SingerName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/music_notes_white"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/songs_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0.81"
+        android:background="@color/OrangeRed"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/backImgBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/songsPage_header"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/backImgBtn"
+            android:text="@string/devotional_head"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/playmenu"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp">
+
+        <ImageButton
+            android:id="@+id/backwrdBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/grid_selector"
+            android:src="@drawable/play_prev" />
+
+        <ImageButton
+            android:id="@+id/fwrdBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/grid_selector"
+            android:src="@drawable/play_next" />
+
+        <ImageButton
+            android:id="@+id/pausePlayBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/media_player_border"
+            android:src="@drawable/pause_btn" />
+    </RelativeLayout>
+
+
+    <SeekBar
+        android:id="@+id/SeekBarTestPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/playmenu"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:progress="1"
+        android:progressTint="@color/OrangeRed"
+        android:thumb="@drawable/seekbar_style" />
+
+    <TextView
+        android:id="@+id/songLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/SeekBarTestPlay"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="20dp"
+        android:text=""
+        android:textColor="@color/Black" />
+
+    <TextView
+        android:id="@+id/currentLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/SeekBarTestPlay"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:text=""
+        android:textColor="@color/Black" />
+
+    <TextView
+        android:id="@+id/SongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/SeekBarTestPlay"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="35dp"
+        android:text=""
+        android:textColor="@color/Black"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/SingerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/SeekBarTestPlay"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:text=""
+        android:textColor="@color/Black"
+        android:textSize="12dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_above="@id/SongTitle">
+
+        <ImageButton
+            android:id="@+id/SongImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/borderbtn_selected" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/downloadSongBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/download_song_icon"
+        android:layout_above="@id/SeekBarTestPlay"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/grid_selector"
+        android:backgroundTint="@color/OrangeRed" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progressBar_percentage"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="25"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@drawable/percentage_progressbar"
+            android:secondaryProgress="100"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/percentageTv"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:gravity="center"
+            android:text="0%"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

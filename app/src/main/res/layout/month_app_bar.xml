@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0BE22">
+
+
+    <LinearLayout
+        android:id="@+id/adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/header_month"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/OrangeRed"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/weathers_layout"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/weatherLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:maxLines="4"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/weatherCondition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/weatherLocation"
+                        android:gravity="center"
+                        android:maxLines="4"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/weatherTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@id/weatherCondition"
+                        android:gravity="center"
+                        android:maxLines="4"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/menu_click"
+                android:layout_width="27.67dp"
+                android:layout_height="20.67dp"
+                android:layout_alignParentBottom="true"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:src="@drawable/menu_icon_click"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/gridMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/grid_selector"
+                android:src="@drawable/new_grid"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/month_icon_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:gravity="right|center"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/month_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text="@string/day"
+                    android:textColor="@color/White"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/go_to_day"
+                    android:layout_width="20dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/day1" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/calendar_above"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_month"
+        android:background="@color/OrangeRed">
+
+        <LinearLayout
+            android:id="@+id/month_name_date_show"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/prev_button"
+
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow_left" />
+
+            <TextView
+                android:id="@+id/current_month"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/White"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/next_button"
+
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/tamil_month_show"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/month_name_date_show"
+            android:background="#9966CC"
+            android:gravity="center"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/tamil_month"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/month"
+                android:textColor="@color/White"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/calendar_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/calendar_above"
+        android:background="#E8F4F4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="SUN"
+            android:textColor="#222222" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="MON"
+            android:textColor="#222222" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="TUE"
+            android:textColor="#222222" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="WED"
+            android:textColor="#222222" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="THU"
+            android:textColor="#222222" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="FRI"
+            android:textColor="#222222" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="SAT"
+            android:textColor="#222222" />
+    </LinearLayout>
+
+    <com.softcraft.calendar.ServiceAndOthers.CustomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adview"
+        android:layout_below="@+id/calendar_header"
+        android:background="#F0BE22">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/calendar_below"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="288dp"
+                    android:background="#E8F4F4"
+                    android:fitsSystemWindows="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/festival_list_show"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pager"
+                android:background="#F0BE22"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/cell_shape"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/festival_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/festival_day"
+                        android:textColor="@color/LightSlateGray"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/LightSlateGray"/>
+
+                    <ListView
+                        android:id="@+id/festival_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@color/GhostWhite"
+                        android:divider="@color/GhostWhite"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        android:listSelector="@android:color/transparent"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.softcraft.calendar.ServiceAndOthers.CustomScrollView>
+
+
+</RelativeLayout>
+
+

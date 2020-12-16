@@ -1,0 +1,323 @@
+{
+  "project_info": {
+    "project_number": "108003495296",
+    "firebase_url": "https://subam-tamil-calendar.firebaseio.com",
+    "project_id": "subam-tamil-calendar",
+    "storage_bucket": "subam-tamil-calendar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108003495296:android:0a10162f6bfced29",
+        "android_client_info": {
+          "package_name": "com.book.tamilbible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108003495296-s1nutb8r826balfuc5h47vmdn7lbjb1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.book.tamilbible",
+            "certificate_hash": "6b5a1a4a54f30580200ec34666004b426fe13c35"
+          }
+        },
+        {
+          "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeXirVdcyX_gwfZiWEBVVS0hvGvx3x9M4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108003495296-pptahn7qh8hh3fm2qv98mpni629iekn6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dinamalar.calendar",
+                "app_store_id": "1087267157"
+              }
+            },
+            {
+              "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108003495296:android:bc2b2ce230d51f61",
+        "android_client_info": {
+          "package_name": "com.book.hindibible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108003495296-qa1c36gars8ns03sojdd3bssfqj0q81c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.book.hindibible",
+            "certificate_hash": "10d512ee1aef82478b114cf16f8956a60d856bf0"
+          }
+        },
+        {
+          "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeXirVdcyX_gwfZiWEBVVS0hvGvx3x9M4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108003495296-pptahn7qh8hh3fm2qv98mpni629iekn6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dinamalar.calendar",
+                "app_store_id": "1087267157"
+              }
+            },
+            {
+              "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108003495296:android:a6ca1ec06934b8c7",
+        "android_client_info": {
+          "package_name": "com.softcraft.nltbible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108003495296-52s651g1h6si29bbrjlahqtbkiukqcsh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softcraft.nltbible",
+            "certificate_hash": "4c20167bed31b2a7aa288483634716a56b2df30a"
+          }
+        },
+        {
+          "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeXirVdcyX_gwfZiWEBVVS0hvGvx3x9M4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108003495296-pptahn7qh8hh3fm2qv98mpni629iekn6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dinamalar.calendar",
+                "app_store_id": "1087267157"
+              }
+            },
+            {
+              "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108003495296:android:9857a2821e5492ed",
+        "android_client_info": {
+          "package_name": "com.softcraft.telugubible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108003495296-94u43vlif41orpds5r92s5m0nuuikbsu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softcraft.telugubible",
+            "certificate_hash": "c0f5f91abba41e1f6e810f15d1dc96c16cb6a92e"
+          }
+        },
+        {
+          "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeXirVdcyX_gwfZiWEBVVS0hvGvx3x9M4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108003495296-pptahn7qh8hh3fm2qv98mpni629iekn6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dinamalar.calendar",
+                "app_store_id": "1087267157"
+              }
+            },
+            {
+              "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108003495296:android:7515c4fe89f725dc",
+        "android_client_info": {
+          "package_name": "com.softcraft.filipinobible"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108003495296-sqgilabdtgrm5r50sqla6vi0jj22oeb0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softcraft.filipinobible",
+            "certificate_hash": "7ba9efcf57864c878a32751e37eba54714565c4a"
+          }
+        },
+        {
+          "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeXirVdcyX_gwfZiWEBVVS0hvGvx3x9M4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108003495296-pptahn7qh8hh3fm2qv98mpni629iekn6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dinamalar.calendar",
+                "app_store_id": "1087267157"
+              }
+            },
+            {
+              "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108003495296:android:35c9a1cb376c8596",
+        "android_client_info": {
+          "package_name": "com.softcraft.calendar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108003495296-bjusab9f40nh4rdon7e3r90ja41d5dna.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.softcraft.calendar",
+            "certificate_hash": "8902754408296baf6930d77269865643543dfed1"
+          }
+        },
+        {
+          "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeXirVdcyX_gwfZiWEBVVS0hvGvx3x9M4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108003495296-pptahn7qh8hh3fm2qv98mpni629iekn6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dinamalar.calendar",
+                "app_store_id": "1087267157"
+              }
+            },
+            {
+              "client_id": "108003495296-qjallko4l2kf88qnccp9l68ds9otgm0n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

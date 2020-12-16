@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/nav_list_selector">
+
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="35dp"
+            android:padding="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/desc_list_item_icon"
+            android:src="@drawable/festivals_and_holidays"
+            android:background="@drawable/list_icon_bg_color"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/divi"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/icon"
+            android:background="#3e82a2"
+            android:layout_width="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="38dp" />
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/divi"
+            android:textSize="12dp"
+            android:text=""
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/list_item_title"
+            android:gravity="center_vertical"
+            android:paddingRight="40dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/tag_image"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/new_tag_corner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

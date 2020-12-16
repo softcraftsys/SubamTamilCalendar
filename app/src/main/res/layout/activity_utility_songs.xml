@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/media_background"
+    android:id="@+id/rootLayout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/songs_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0.81"
+        android:background="@color/OrangeRed"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/news_imgback_click"
+            android:layout_width="40dp"
+
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_left" />
+
+        <TextView
+            android:id="@+id/title_head"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/utility_head"
+            android:layout_toRightOf="@id/news_imgback_click"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_marginRight="10dp"
+            android:id="@+id/shareImg"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/share_ic"
+            android:contentDescription="TODO" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/notication_adview"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone">
+    </LinearLayout>
+        <ListView
+            android:id="@+id/listviewUtility"
+            android:layout_above="@id/notication_adview"
+            android:clickable="true"
+            android:divider="@color/transparent"
+            android:listSelector="@drawable/grid_selector"
+            android:dividerHeight="2dp"
+            android:layout_below="@id/songs_header_layout"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/fabPlayPause"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circle_blue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/notication_adview"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/playImg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@drawable/ic_ply" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/circlePG_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/circle_loading"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+
+</RelativeLayout>

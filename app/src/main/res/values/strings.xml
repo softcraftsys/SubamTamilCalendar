@@ -1,0 +1,488 @@
+<resources>
+    <string name="app_name">Subam Tamil Calendar</string>
+
+    <string name="APP_ID"> 225412184693620 </string>
+
+    <string name="today"> இன்று </string>
+    <string name="tomorrow"> நாளை  </string>
+    <string name="amavasai"> அமாவாசை  </string>
+    <string name="amavasai_db"> அமாவாசை	  </string>
+    <string name="pournami"> பௌர்ணமி </string>
+    <string name="kirthigai">கிருத்திகை </string>
+    <string name="yehadasi">ஏகாதசி </string>
+    <string name="submugurthanal"> சுபமுகூர்த்த நாள்</string>
+    <string name="devotional_head"> தெய்வீகப் பாடல்கள் </string>
+    <string name="utility_head">மங்கள ஒலிகள்</string>
+    <string name="app_head">சுபம் தமிழ் நாட்காட்டி</string>
+    <string name="download_app_text">மேலும் பல தகவல்களை அறிய "சுபம் தமிழ் நாட்காட்டி" செயலியை பதிவிறக்கம் செய்து கொள்ளுங்கள்! goo.gl/yz6q6y</string>
+    <string name="rate_app_Text">If you enjoy using this app,would you mind taking a moment to rate it? thanks for your support.!</string>
+    <string name="updateInfo">தங்களின் சுபம் நாட்காட்டி செயலி பழைய பதிப்பாக உள்ளது..</string>
+    <string name="updateDesc">புதிய சிறப்பம்சங்கள் பல கொண்ட எமது சமீப செயலி பதிப்பை பெற்றுக்கொள்ளுங்கள்.</string>
+    <string name="updateText">பதிவிறக்கம் செய்ய</string>
+    <string name="exitAlertTex">தாங்கள் இந்த செயலியில் இருந்து வெளியேற விரும்புகிறீர்களா?</string>
+    <string name="kural">மலர்மிசை ஏகினான் மாணடி சேர்ந்தார் நிலமிசை நீடுவாழ் வார்</string>
+    <string name="yesText">ஆம்</string>
+    <string name="noText">இல்லை</string>
+
+    <string name="festival_day">பண்டிகை நாட்கள் </string>
+    <string name="manaiyadi_sasthiram">மனையடி சாஸ்திரம் </string>
+    <string name="morning">காலை </string>
+    <string name="evening">மாலை </string>
+    <string name="raagu_kaalam">இராகு காலம் </string>
+    <string name="emakandam">எமகண்டம் </string>
+    <string name="kulikai">குளிகை </string>
+    <string name="thithi">திதி </string>
+    <string name="soolam">சூலம் </string>
+    <string name="star">நட்சத்திரம் </string>
+    <string name="currentYear">விகாரி</string>
+    <string name="currentYear1">சார்வரி</string>
+    <string name="yokam">யோகம் </string>
+    <string name="chanthirastamam">சந்திராஷ்டமம் </string>
+    <string name="good_time">நல்ல நேரம் </string>
+    <string name="today_horoscope">இன்றைய இராசிபலன்</string>
+    <!--<string name="today_horoscope">இன்றைய ராசி பலன் </string>-->
+    <string name="day">நாள் </string>
+    <string name="month">மாதம் </string>
+    <!--<string name="tamil_year">துர்முகி </string>-->
+    <string name="subamugurtham">சுப முகூர்த்த தினங்கள் </string>
+    <string name="subamugurtham_day">சுப முகூர்த்த நாள் </string>
+    <string name="aboutus">எங்களைப்பற்றி</string>
+    <string name="article_stories_head">கதைகள் மற்றும் கட்டுரைகள்</string>
+
+
+    <string name="holi_day">விடுமுறை நாட்கள் </string>
+    <string name="viratham_day">விரத நாட்கள் </string>
+    <string name="PournamiAmavasai">அமாவாசை/பௌர்ணமி </string>
+    <string name="gowripanchagam">கௌரி பஞ்சாங்கம் </string>
+    <string name="giragaooraigal">கிரக ஓரைகள் </string>
+
+
+    <string-array name="raasi_Array">
+        <item name="mesham">மேஷம்</item>
+        <item name="rishabam">ரிஷபம்</item>
+        <item name="midhunam">மிதுனம்</item>
+        <item name="kadagam">கடகம்</item>
+        <item name="simmam">சிம்மம்</item>
+        <item name="kanni">கன்னி</item>
+        <item name="thulaam">துலாம்</item>
+        <item name="viruchigam">விருச்சிகம்</item>
+        <item name="dhanusu">தனுசு</item>
+        <item name="magaram">மகரம்</item>
+        <item name="kumbam">கும்பம்</item>
+        <item name="meenam">மீனம்</item>
+    </string-array>
+
+    <string-array name="tamilmonth_array_subamukoortham">
+        <item>ஜனவரி 2020</item>
+        <item>பிப்ரவரி 2020</item>
+        <item>மார்ச் 2020</item>
+        <item>ஏப்ரல் 2020</item>
+        <item>மே 2020</item>
+        <item>ஜூன் 2020</item>
+        <item>ஜூலை 2020</item>
+        <item>ஆகஸ்ட் 2020</item>
+        <item>செப்டம்பர் 2020</item>
+        <item>அக்டோபர் 2020</item>
+        <item>நவம்பர் 2020</item>
+        <item>டிசம்பர் 2020</item>
+        <item>ஜனவரி 2021</item>
+        <item>பிப்ரவரி 2021</item>
+        <item>மார்ச் 2021</item>
+        <item>ஏப்ரல் 2021</item>
+        <item>மே 2021</item>
+        <item>ஜூன் 2021</item>
+        <item>ஜூலை 2021</item>
+        <item>ஆகஸ்ட் 2021</item>
+        <item>செப்டம்பர் 2021</item>
+        <item>அக்டோபர் 2021</item>
+        <item>நவம்பர் 2021</item>
+        <item>டிசம்பர் 2021</item>
+    </string-array>
+
+
+    <string name="user_welcome_txt"> சுபம் தமிழ் நாட்காட்டி தங்களை அன்புடன் வரவேற்கிறது </string>
+
+    <string name="marriage_matching_disclaimer">"நாங்கள் இங்கு தந்துள்ள இந்தத் திருமணப் பொருத்தம் என்பது திருமண மையங்களில் வரன்களை பெற்றோர் உடனுக்குடன் பொருத்தம் கண்டு தேர்வு செய்ய உதவும் பொருட்டு அமைக்கப்பட்டு உள்ளது. மற்றபடி அவரவர் குடும்ப ஜோதிடர்களை கொண்டு இதனை ஒருமுறை சரி பார்த்துக் கொள்வது பெற்றோர்கள் பொறுப்பே.
+
+அத்துடன் எப்பேர்ப்பட்ட சிறப்பான இரு வரன்களுக்கும் கூட 100 சதவீதம் பொருத்தம் இருக்காது. அதே போல பொருத்தம் சரி இல்லை என்றாலுமே வரன்கள் இருவரது ஜாதக கட்டத்திலுமே குடும்ப ஸ்தானங்கள் சிறப்பாக அமைந்து விட்டால் திருமணம் செய்யலாம். அங்கு பொருத்தம் விதி விலக்காக மாறிவிடுகிறது."</string>
+    <string name="txt_thirumana_porutham_title">திருமணப் பொருத்தம்</string>
+    <string name="rta_female_raasi"> மணமகள் ராசி </string>
+    <string name="rta_female_natchathiram">மணமகள் நட்சத்திரம்</string>
+    <string name="rta_male_raasi"> மணமகன் ராசி </string>
+    <string name="rta_male_natchathiram">மணமகன் நட்சத்திரம்</string>
+    <string name="btn_submit_porutham">சமர்ப்பிக்கவும்</string>
+    <string name="btn_thirumana_porutham_tips">குறிப்புகள்</string>
+    <string name="dhina_porutham">தினப் பொருத்தம்</string>
+    <string name="dhina_porutham_vilakkam">இதை நட்சத்திர பொருத்தம் என்றும் சொல்வார்கள். ஆண், பெண் இருவரது ஆயுள் மற்றும் ஆரோக்கியம் பற்றி தெரிந்து கொள்ள இந்த பொருத்தம் மிகவும் உதவுகிறது.</string>
+    <string name="gana_porutham">கணப் பொருத்தம்</string>
+    <string name="gana_porutham_vilakkam">இது தான் குணத்தை பற்றி தெரிந்து கொள்ளக்கூடிய பொருத்தம். மனைவியாக வரப்போகிறவள், கணவனாக வரப்போகிறவன் எத்தகைய குணத்தை பெற்றிருப்பான் என்பதை இந்த பொருத்தத்தை வைத்து தெரிந்து கொள்ளலாம்.</string>
+    <string name="mahendhra_porutham">மகேந்திரப் பொருத்தம்</string>
+    <string name="mahendhra_porutham_vilakkam">திருமணம் செய்யப்போகும் ஆணுக்கும், பெண்ணுக்கும் இந்த பொருத்தம் இருந்தால் தான் அவர்களுக்கு குழந்தை பாக்கியம் கிடைக்கும் என்று சொல்லப்படுகிறது.</string>
+    <string name="sthreega_porutham">ஸ்த்ரீ தீர்க்கப் பொருத்தம்</string>
+    <string name="sthreega_porutham_vilakkam">இந்த பொருத்தம் இருந்தால் தான், திருமணம் செய்பவர்கள் வாழ்வில் பணத் தட்டுப்பாடு வராது. இல்லையேல் தம்பதியர் இடையே பொருளாதார ரீதியான ஏற்றத் தாழ்வுகள் திருமணத்துக்குப் பிறகு அதிகம் காணப்படும்.</string>
+    <string name="yoni_porutham">யோனிப் பொருத்தம்</string>
+    <string name="yoni_porutham_vilakkam">இது மிக, மிக முக்கியமான பொருத்தம். கணவன்-மனைவி இருவரும் தாம்பத்திய வாழ்க்கையில் எந்த அளவுக்கு திருப்தியாக இருப்பார்கள் என்பதை சொல்லக்கூடியது இது. அதனால், இந்த பொருத்தம் கண்டிப்பாக இருக்க வேண்டும்.</string>
+    <string name="raasi_porutham">ராசிப் பொருத்தம்</string>
+    <string name="raasi_porutham_vilakkam">இந்த பொருத்தம் இருந்தால் தான் வம்சம் விருத்தியாகும். அதாவது, வாழையடி வாழையாக குடும்பம் தழைக்கும்.</string>
+    <string name="raasi_adhipadthi_porutham">ராசி அதிபதிப் பொருத்தம்</string>
+    <string name="raasi_adhipadthi_porutham_vilakkam">குடும்பம் சுபிட்சமாக-சந்தோஷமாக இருக்குமா என்பதை தெரிவிக்கக்கூடியது இந்தப் பொருத்தம்.</string>
+    <string name="vasiya_porutham">வசியப் பொருத்தம்</string>
+    <string name="vasiya_porutham_vilakkam">இந்தப் பொருத்தம் இருந்தால் தான் கணவன்-மனைவிக்குள் ஒரு ஈர்ப்பு ஏற்படும். இல்லையென்றால் சண்டைக்கோழி தான்.</string>
+    <string name="rajju_porutham">ரஜ்ஜுப் பொருத்தம்</string>
+    <string name="rajju_porutham_vilakkam">இந்த பொருத்தம் இருந்தால் தான் கணவனுக்கு ஆயுள் பலம் உண்டாகும். பெண்ணின் மாங்கல்ய பாக்கியத்தை உறுதி செய்யும் இந்தப் பொருத்தம் இருப்பது மிக மிக அவசியம்.</string>
+    <string name="vedhai_porutham">வேதைப் பொருத்தம்</string>
+    <string name="vedhai_porutham_vilakkam">திருமணம் செய்யப்போகும் தம்பதியர் வாழ்வில் சுக துக்கங்கள் எந்த அளவில் இருக்கும் என்பதை கணிக்கக்கூடியது இந்தப் பொருத்தம். இந்த பொருத்தம் இருந்தால் தான், பின்னாளில் வாழ்வில் பிரச்சினைகள் அதிகம் இருக்காது.</string>
+    <string name="share_message">"\"Tamil Calendar 2020\" செயலியில் இருந்து பகிரப்பட்டது.</string>
+    <string name="porutham_ok">பொருந்தும்</string>
+    <string name="porutham_not_ok">பொருந்தாது</string>
+    <string name="porutham_equal">மத்திமம்</string>
+
+
+    <string name="history"> வரலாற்றில் இன்று </string>
+    <string name="todaymsg"> இன்று ஒரு தகவல் </string>
+
+    <string name="gurupeyarchi_palan_title">குருபெயர்ச்சி பலன்கள்</string>
+    <string name="sanipeyarchi_palan_title">சனிப்பெயர்ச்சி பலன்கள்</string>
+
+
+    <string-array name="Mesha_stars">
+        <item>அசுவினி	</item>
+        <item> பரணி </item>
+        <item> கார்த்திகை </item>
+    </string-array>
+
+    <string-array name="Vrishabha_stars">
+        <item> கார்த்திகை	</item>
+        <item> ரோகிணி</item>
+        <item> மிருகசீரிடம்	</item>
+    </string-array>
+
+    <string-array name="Mithuna_stars">
+        <item>மிருகசீரிடம்</item>
+        <item>திருவாதிரை</item>
+        <item>புனர்பூசம்</item>
+    </string-array>
+
+    <string-array name="Kataka_stars">
+        <item>புனர்பூசம்</item>
+        <item>பூசம்	</item>
+        <item>ஆயில்யம்	</item>
+    </string-array>
+
+    <string-array name="Simha_stars">
+        <item>மகம்	</item>
+        <item>பூரம்</item>
+        <item>உத்திரம்</item>
+    </string-array>
+
+    <string-array name="Kanya_stars">
+        <item>உத்திரம்	</item>
+        <item>அஸ்தம்</item>
+        <item>சித்திரை	</item>
+
+    </string-array>
+
+    <string-array name="Thula_stars">
+        <item>சித்திரை	</item>
+        <item>சுவாதி	</item>
+        <item>விசாகம்</item>
+    </string-array>
+
+    <string-array name="Vrischika_stars">
+        <item>விசாகம்	</item>
+        <item>அனுஷம்	</item>
+        <item>கேட்டை	</item>
+    </string-array>
+
+    <string-array name="Dhanus_stars">
+        <item>மூலம்	</item>
+        <item>பூராடம்	</item>
+        <item>உத்திராடம்	</item>
+    </string-array>
+
+    <string-array name="Makara_stars">
+        <item>உத்திராடம்	</item>
+        <item>திருவோணம்	</item>
+        <item>அவிட்டம்</item>
+    </string-array>
+
+    <string-array name="Kumbha_stars">
+        <item>அவிட்டம்	</item>
+        <item>சதயம்</item>
+        <item>பூரட்டாதி	</item>
+    </string-array>
+
+    <string-array name="Meena_stars">
+        <item>பூரட்டாதி	</item>
+        <item>உத்திரட்டாதி	</item>
+        <item>ரேவதி</item>
+    </string-array>
+
+
+    <item name="fasting" type="id" />
+    <item name="valarpirai" type="id" />
+    <item name="arrow_img" type="id" />
+    <string name="news">செய்திகள்</string>
+    <string name="help_heading">குறிப்புகள் </string>
+    <string name="weather">வானிலை </string>
+    <string name="mathapalan">மாத இராசிபலன்</string>
+    <string name="yearpalan">வருட இராசிபலன்</string>
+    <string name="notifType">Notification Settings</string>
+
+
+    <string-array name="gurupeyarchi_coverimage_ids">            <!--15-->
+        <item>guru_mesham_cover</item>
+        <item>guru_rishabam_cover</item>
+        <item>guru_mithunam_cover</item>
+        <item>guru_kadagam_cover</item>
+        <item>guru_simmam_cover</item>
+        <item>guru_kanni_cover</item>
+        <item>guru_thulam_cover</item>
+        <item>guru_viruchigam_cover</item>
+        <item>guru_dhausu_cover</item>
+        <item>guru_magaram_cover</item>
+        <item>guru_kumbam_cover</item>
+        <item>guru_meenam_cover</item>
+    </string-array>
+    <string-array name="sanipeyarchi_coverimage_ids">            <!--15-->
+        <item>mesham_sani</item>
+        <item>rishabam_sani</item>
+        <item>mithnam_sani</item>
+        <item>kadagam_sani</item>
+        <item>simmam_sani</item>
+        <item>kanni_sani</item>
+        <item>thulam_sani</item>
+        <item>viruchigam_sani</item>
+        <item>danusu_sani</item>
+        <item>magaram_sani</item>
+        <item>kumbam_sani</item>
+        <item>meenam_sani</item>
+    </string-array>
+
+
+    <string-array name="nav_drawer_items"><!--15-->
+        <!-- <item>Home</item>-->
+        <item>விசேஷ செய்திகள் </item>
+        <item>பண்டிகை நாட்கள் </item>
+        <item>மனையடி சாஸ்திரம் </item>
+        <item>சுப முகூர்த்த தினங்கள் </item>
+        <item>இன்றைய இராசிபலன் </item>
+        <item>மாத இராசிபலன் </item>
+        <item>வருட இராசிபலன் </item>
+        <item> தெய்வீகப் பாடல்கள் </item>
+        <item> மங்கள ஒலிகள் </item>
+        <item>கதைகள் மற்றும் கட்டுரைகள்</item>
+        <item>கனவு பலன்கள்</item>
+        <item>பல்லி விழும் பலன்கள்</item>
+        <item>குழந்தை பெயர்கள்</item>
+        <item>Devotional Wallpapers</item>
+        <item> குறிப்புகள்</item>
+        <!--<item>தொடர்கதைகள் </item>-->
+        <!--<item>பங்குச்சந்தை </item>-->
+        <!--<item>தங்கம், வெள்ளி விலை நிலவரம் </item>-->
+
+        <!--<item>My Profile </item>-->
+        <item>Notification Settings</item>
+        <item>Help </item>
+        <item>எங்களைப் பற்றி </item>
+    </string-array>
+
+
+    <string-array name="nav_drawer_items1">   <!--16-->
+        <!--<item>Home</item>-->
+        <item>விசேஷ செய்திகள் </item>
+        <item>பண்டிகை நாட்கள் </item>
+        <item> மனையடி சாஸ்திரம் </item>
+        <item>சுப முகூர்த்த தினங்கள் </item>
+        <item> இன்றைய இராசிபலன் </item>
+        <item>மாத இராசிபலன் </item>
+        <item>வருட இராசிபலன் </item>
+        <item> தெய்வீகப் பாடல்கள் </item>
+        <item> மங்கள ஒலிகள் </item>
+        <item>கதைகள் மற்றும் கட்டுரைகள்</item>
+        <item>கனவு பலன்கள்</item>
+        <item>பல்லி விழும் பலன்கள்</item>
+        <item>குழந்தை பெயர்கள்</item>
+        <item>Devotional Wallpapers</item>
+        <item> குறிப்புகள்</item>
+        <!--<item>தொடர்கதைகள் </item>-->
+        <!--<item>பங்குச்சந்தை </item>-->
+        <!--<item>தங்கம், வெள்ளி விலை நிலவரம் </item>-->
+        <item>வானிலை </item>
+        <!--<item>My Profile </item>-->
+        <item>Notification Settings</item>
+        <item>Help </item>
+        <item>எங்களைப் பற்றி </item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+
+    <!--<string name="facebooktxt2">Download app @ https://play.google.com/store/apps/details?<br /> </string>-->
+
+    <string name="about_tamil_calendar">ஆண்ட்ராய்டு மொபைல்களுக்கு,சுபம்  தமிழ் நாட்காட்டி வழங்குவதில் நாங்கள் மகிழ்ச்சி அடைகிறோம்.
+எங்களை ஊக்கப்படுத்த வாக்களியுங்கள் : ) தங்களுடைய கருத்துக்களை தெரிவியுங்கள்.
+பிழைகளை இமெயில் மூலம் தெரியப்படுத்துங்கள்.</string>
+    <string name="app_name_aboutus">சுபம்   தமிழ் நாட்காட்டி</string>
+    <string name="Mail_Id"><u>softcraftsystems@gmail.com</u></string>
+    <string name="Website_Id"><u>www.softcraftsystems.com</u></string>
+    <string name="songText"> பாடல்கள் </string>
+
+    <string name="newSongsTabTxt"> புதியவை </string>
+    <string name="famousSongsTabText"> பிரபலமானவை </string>
+    <string name="singersSongTabText"> பாடகர்கள் </string>
+
+    <!--Horoscope-->
+    <string name="mesham">மேஷம்</string>
+    <string name="rishabam">ரிஷபம்</string>
+    <string name="midhunam">மிதுனம்</string>
+    <string name="kadagam">கடகம்</string>
+    <string name="simmam">சிம்மம்</string>
+    <string name="kanni">கன்னி</string>
+    <string name="thulaam">துலாம்</string>
+    <string name="viruchigam">விருச்சிகம்</string>
+    <string name="dhanusu">தனுசு</string>
+    <string name="magaram">மகரம்</string>
+    <string name="kumbam">கும்பம்</string>
+    <string name="meenam">மீனம்</string>
+
+    <array name="horoscope_title">
+        <item>மேஷம்</item>
+        <item>ரிஷபம்</item>
+        <item>மிதுனம்</item>
+        <item>கடகம்</item>
+        <item>சிம்மம்</item>
+        <item>கன்னி</item>
+        <item>துலாம்</item>
+        <item>விருச்சிகம்</item>
+        <item>தனுசு</item>
+        <item>மகரம்</item>
+        <item>கும்பம்</item>
+        <item>மீனம்</item>
+    </array>
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_news">NewsActivity</string>
+
+    <string name="kanavu_palan">கனவு பலன்கள்</string>
+    <string name="palli_palan">பல்லி விழும் பலன்கள்</string>
+    <string name="baby_names">குழந்தை பெயர்கள்</string>
+    <string name="devotional_wall">Devotional Wallpapers</string>
+    <string name="share_market">பங்குச்சந்தை</string>
+    <string name="user_login_title">My Profile</string>
+    <string name="gold_rate">தங்கம், வெள்ளி விலை நிலவரம்</string>
+    <string name="episodes_title">தொடர்கதைகள்</string>
+    <string name="notes_title">குறிப்புகள்</string>
+
+    <string name="part_str">உறுப்பு</string>
+    <string name="left_str">இடம்</string>
+    <string name="right_str">வலம்</string>
+    <string name="get_name">தேடல்</string>
+    <string name="title_name">பெயர் :</string>
+    <string name="title_meaning">அர்த்தம் :</string>
+    <string name="desc_title">விளக்கம் :</string>
+    <string name="todays_thought">இன்றைய மேற்கோள்</string>
+
+    <array name="left_palan_array">
+        <item>துன்பம்</item>
+        <item>கீர்த்தி</item>
+        <item>பயம்</item>
+        <item>லாபம்</item>
+        <item>கவலை</item>
+        <item>வெற்றி</item>
+        <item>சுகம்</item>
+        <item>கவலை</item>
+        <item>மகிழ்ச்சி</item>
+        <item>வரவு</item>
+        <item>கீர்த்தி</item>
+        <item>நஷ்டம்</item>
+        <item>சஞ்சலம்</item>
+        <item>வெற்றி</item>
+        <item>செல்வம்</item>
+        <item>பயணம்</item>
+    </array>
+    <array name="parts_name_array">
+        <item>தலை</item>
+        <item>நெற்றி</item>
+        <item>கண்</item>
+        <item>காது</item>
+        <item>மூக்கு</item>
+        <item>கழுத்து</item>
+        <item>மார்பு</item>
+        <item>முதுகு</item>
+        <item>வயிறு</item>
+        <item>கபாலம்</item>
+        <item>மணிக்கட்டு</item>
+        <item>நகம்</item>
+        <item>தொடை</item>
+        <item>தோல்</item>
+        <item>பிருஷ்டம்</item>
+        <item>கணுக்கால்</item>
+    </array>
+    <array name="right_palan_array">
+        <item>கலகம்</item>
+        <item>லக்ஷ்மிகரம்</item>
+        <item>சுகம்</item>
+        <item>ஆயுள்</item>
+        <item>வியாதி</item>
+        <item>பகை</item>
+        <item>லாபம்</item>
+        <item>நஷ்டம்</item>
+        <item>தானியம்</item>
+        <item>வரவு</item>
+        <item>பீடை</item>
+        <item>செலவு</item>
+        <item>-</item>
+        <item>வெற்றி</item>
+        <item>சுகம்</item>
+        <item>செலவு</item>
+    </array>
+
+    <array name="religion_baamini">
+        <item>,e;J</item>
+        <item>K];ypk;</item>
+        <item>fpwp];JtH</item>
+    </array>
+    <array name="religion_tamil">
+        <item>இந்து</item>
+        <item>முஸ்லிம்</item>
+        <item>கிறிஸ்துவர்</item>
+    </array>
+    <array name="gender_tamil">
+        <item>ஆண்</item>
+        <item>பெண்</item>
+    </array>
+    <array name="gender_baamini">
+        <item>Mz;</item>
+        <item>ngz;</item>
+    </array>
+
+    <string-array name="english_month">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+
+    <string name="shortcut1"> தினசரி </string>
+    <string name="shortcut1_long"> தினசரி நாட்காட்டி </string>
+    <string name="shortcut1_disabled"> Disabled 1 </string>
+
+    <string name="shortcut2"> மாதம் </string>
+    <string name="shortcut2_long"> மாத நாட்காட்டி </string>
+    <string name="shortcut2_disabled"> Disabled 2 </string>
+
+    <string name="shortcut3"> விரதம் </string>
+    <string name="shortcut3_long"> விரத நாட்கள் </string>
+    <string name="shortcut3_disabled"> Disabled3  </string>
+
+</resources>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.softcraft.calendar.Activity.NotesActivity">
+
+    <LinearLayout
+        android:id="@+id/notification_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="visible"></LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/coOrdinatorLaout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/notification_adview"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/White">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetRight="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.81"
+                    android:background="@color/OrangeRed"
+                    android:elevation="3dp">
+
+                    <ImageView
+                        android:id="@+id/back_arrow"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_left" />
+
+                    <TextView
+                        android:id="@+id/title_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/back_arrow"
+                        android:layout_toRightOf="@+id/back_arrow"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:id="@+id/swipe_refresh"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/notesRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F4F1F7"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/light_orange"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ImageView
+        android:id="@+id/addNoteImg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/add_note_ic" />
+
+    <RelativeLayout
+        android:id="@+id/notesBackgroundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/notesContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/round_alertbox_corner">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/titleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/top_rounded_corner_layout"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/appTitleTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:text="Notes"
+                            android:textColor="@color/Black"
+                            android:textSize="18dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/titleLayout"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/titleNoteTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:text="Title"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/titleEditTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/titleNoteTv"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginRight="40dp"
+                                android:background="@drawable/edittext_background"
+                                android:padding="10dp"
+                                android:text=""
+                                android:hint="title"
+                                android:textColorHint="@color/grey"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="17dp" />
+
+                            <!--<View-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="1dp"-->
+                            <!--android:layout_below="@id/titleEditTv"-->
+                            <!--android:layout_marginLeft="20dp"-->
+                            <!--android:layout_marginRight="20dp"-->
+                            <!--android:background="@color/dark_grey" />-->
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/descNoteTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="40dp"
+                                android:text="Description"
+                                android:textColor="@color/dark_grey"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+
+                            <EditText
+                                android:id="@+id/descEditTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/descNoteTv"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginRight="40dp"
+                                android:background="@drawable/edittext_background"
+                                android:padding="10dp"
+                                android:text=""
+                                android:hint="description"
+                                android:textColorHint="@color/grey"
+                                android:textSize="17dp"
+                                android:textColor="@color/dark_grey" />
+
+                            <!--<View-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="1dp"-->
+                            <!--android:layout_below="@id/descEditTv"-->
+                            <!--android:layout_marginLeft="20dp"-->
+                            <!--android:layout_marginRight="20dp"-->
+                            <!--android:background="@color/dark_grey" />-->
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/setReminderLayout"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/remindMeTvLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_marginTop="20dp"
+                                android:layout_alignParentBottom="true"
+                                android:src="@drawable/note_reminder_ic"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp" />
+
+                            <TextView
+                                android:id="@+id/remindmeTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                android:padding="5dp"
+                                android:text="Remind me "
+                                android:textColor="@color/dark_grey"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:layout_below="@id/remindMeTvLayout"
+                                android:id="@+id/noteReminderLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:visibility="visible"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/dark_grey"
+                                    android:text="12 jun 2019 - 10.30 pm"
+                                    android:id="@+id/remindedDateAndTimeTv"
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content" />
+                                <View
+                                    android:visibility="visible"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@color/light_grey_selected"
+                                    android:layout_width="180dp"
+                                    android:layout_height="2dp"/>
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/reminderDateLayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/calendar_ic" />
+
+                                    <TextView
+                                        android:visibility="visible"
+                                        android:id="@+id/reminderDateTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="24-jun-2019" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/reminderTimeLayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="22dp"
+                                        android:layout_height="22dp"
+                                        android:src="@drawable/clock_ic" />
+
+                                    <TextView
+                                        android:id="@+id/reminderTimeTv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="03.30 pm" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp">
+
+                            <Button
+                                android:id="@+id/saveBtn"
+                                android:layout_width="90dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/notes_btn_background"
+                                android:text="Save"
+                                android:textStyle="bold"
+                                android:textSize="15dp"
+                                android:textColor="@color/OrangeRed" />
+
+
+                            <Button
+
+                                android:id="@+id/cancelBtn"
+                                android:layout_width="90dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_toRightOf="@id/saveBtn"
+                                android:background="@drawable/notes_btn_background"
+                                android:text="Cancel"
+                                android:textStyle="bold"
+                                android:textSize="15dp"
+                                android:textColor="@color/OrangeRed" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

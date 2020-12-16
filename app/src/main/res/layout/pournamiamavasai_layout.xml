@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:paddingLeft="1dp"
+            android:paddingTop="0.7dp"
+            android:paddingBottom="1.5dp"
+            android:paddingRight="1dp"
+            android:background="#9966CC">
+
+            <TextView
+                android:id="@+id/englishdate"
+                android:gravity="center"
+                android:text="hai"
+                android:layout_weight="1"
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/White"
+                android:textColor="@color/Black"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/tamildate"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="1.5dp"
+                android:text="hello"
+                android:textColor="@color/Black"
+                android:background="@color/White"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/day"
+                android:gravity="center"
+                android:text="hai"
+                android:layout_weight="1"
+                android:layout_marginLeft="1.5dp"
+                android:background="@color/White"
+                android:textColor="@color/Black"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/time"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginRight="0.5dp"
+                android:text="hello"
+                android:textColor="@color/Black"
+                android:background="@color/White"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"/>
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

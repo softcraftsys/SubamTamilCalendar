@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/item_inflate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#4F000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="#4F000000"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginRight="1dp"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/partNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Part"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/OrangeRed" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/leftSideTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Left"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/rightSideTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Right"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:background="#4F000000"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

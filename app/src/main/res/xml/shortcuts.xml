@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/daily_short_ic"
+        android:shortcutDisabledMessage="@string/shortcut1_disabled"
+        android:shortcutId="daily"
+        android:shortcutLongLabel="@string/shortcut1_long"
+        android:shortcutShortLabel="@string/shortcut1">
+        <intent
+            android:action="daily"
+            android:targetClass="com.softcraft.calendar.SplashScreen.SplashScreen"
+            android:targetPackage="com.softcraft.calendar" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/month_short_ic"
+        android:shortcutDisabledMessage="@string/shortcut2_disabled"
+        android:shortcutId="monthly"
+        android:shortcutLongLabel="@string/shortcut2_long"
+        android:shortcutShortLabel="@string/shortcut2">
+        <intent
+            android:action="monthly"
+            android:targetClass="com.softcraft.calendar.SplashScreen.SplashScreen"
+            android:targetPackage="com.softcraft.calendar" />
+    </shortcut>
+
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/fasting_short_ic"
+        android:shortcutDisabledMessage="@string/shortcut3_disabled"
+        android:shortcutId="fasting"
+        android:shortcutLongLabel="@string/shortcut3_long"
+        android:shortcutShortLabel="@string/shortcut3">
+        <intent
+            android:action="fasting"
+            android:targetClass="com.softcraft.calendar.SplashScreen.SplashScreen"
+            android:targetPackage="com.softcraft.calendar" />
+    </shortcut>
+
+</shortcuts>

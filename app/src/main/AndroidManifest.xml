@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.softcraft.calendar">
+    <!-- Permission for access internet -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <app:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <app:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" /> <!-- <permission -->
+    <!-- android:name="${applicationId}.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <!-- <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" /> -->
+    <!-- <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" /> -->
+    <!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> -->
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" /> <!-- <uses-feature -->
+    <!-- android:name="android.hardware.location.gps" -->
+    <!-- android:required="false" /> &lt;!&ndash; Permissoin for access location &ndash;&gt; -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".History.TamilCalendarApplication"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="allowBackup,supportsRtl">
+
+        <activity
+            android:name=".SplashScreen.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- <data android:scheme="@string/fb_login_protocol_scheme" /> -->
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="dynamic.com"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity> <!-- //service importanr -->
+        <service
+            android:name=".AlarmService.AlarmService"
+            android:process=":remote"> <!-- android:process=".serviceProcess" -->
+        </service>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/APP_ID" /> <!-- //screenshot share above and oreo -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".Activity.Holidays"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FastingDays"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PournamiAmavasai"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MarriageMatch.MarriageMatchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GurupeyarchiPalangalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MarriageMatch.HTMLViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".History.HistoryOfTodayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PDFViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UserDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3295908036015866~7647639838" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" /> <!-- <provider -->
+        <!-- android:name="com.facebook.FacebookContentProvider" -->
+        <!-- android:authorities="com.facebook.app.FacebookContentProvider640109512807048" -->
+        <!-- android:exported="true" /> -->
+        <receiver android:name=".AlarmService.AlarmServiceBroadcastReciever">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".ServiceAndOthers.NotificationDismissedReceiver"
+            android:exported="false" />
+        <receiver android:name=".AlarmService.AlarmAlertBroadcastReciever" /> <!-- //service importanr -->
+        <receiver android:name=".ServiceAndOthers.WidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+        <receiver
+            android:name=".ServiceAndOthers.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".ServiceAndOthers.BackgroundAudioService">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".ServiceAndOthers.StickyService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver android:name="androidx.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Activity.DayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MonthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.FestivalDays"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="dynamic.com"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.ManaiyadiSasthiram"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GowriPanchangam"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SubamugurthamDays"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NotificationSettings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UtilityMediaPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.WeatherCheck"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Horoscope"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.GridMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.HoroscopeURL"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.MediaPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.DevotionalSongsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.SingersCategorySongsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UtilitySongsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.NewsActivity"
+            android:label="@string/title_activity_news"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--
+ <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        -->
+        <!--        <meta-data-->
+        <!--            android:name="com.softcraft.calendar.ServiceAndOthers.GlideConfiguration"-->
+        <!--            android:value="GlideModule" />-->
+
+        <!--        <activity-->
+        <!--            android:name="com.artifex.mupdflib.MuPDFActivity"-->
+        <!--            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".StoriesAndArticals.StoriesAndArticlesActivity"
+            android:screenOrientation="portrait" />
+        <!--
+<activity
+            android:name=".StoriesAndArticals.StoryPage"
+            android:screenOrientation="portrait" />
+        -->
+        <activity
+            android:name=".StoriesAndArticals.StoriesAndArticlesDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StoriesAndArticals.StoriesAuthorBooksActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.KanavuPalangalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.PallivizhumPalangalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DevotionalWallpapers.DevotionalWallpapersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DevotionalWallpapers.DevotionalWallpepersPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.BabyNamesActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activity.ShareMarketActivity" />
+        <activity android:name=".Activity.GoldSilverRateActivity" />
+        <activity android:name=".Episodes.EpisodesMainCategoryActivity" />
+        <activity android:name=".Episodes.EpisodesDetailPageActivity" />
+        <activity
+            android:name=".Activity.NotesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.UserLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Login.GmailLoginActivity" />
+
+        <receiver android:name=".ReminderNotification.NotificationPublisher" />
+    </application>
+
+</manifest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_margin="4dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/UtilSongimage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="5dp" />
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:id="@+id/UtilSongName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="songsTitle"
+                android:textAlignment="center"
+                android:textColor="@color/Black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/artistName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/UtilSongName"
+                android:layout_marginTop="5dp"
+                android:text="singerName"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/SongDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/UtilSongName"
+                android:layout_marginTop="40dp"
+                android:text="size"
+                android:textColor="@color/grey" />
+
+
+            <TextView
+                android:id="@+id/CategoryId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/UtilSongName"
+                android:layout_marginTop="5dp"
+                android:text="size"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

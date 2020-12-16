@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_light_background" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/NoMukoorthamTv"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/grey"
+        android:text="இந்த மாதம் விடுமுறை நாட்கள் இல்லை"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

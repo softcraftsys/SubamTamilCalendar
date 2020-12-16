@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/cardview_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp"
+        card_view:cardMaxElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="200dp">-->
+            <!--<ImageView-->
+            <!--android:id="@+id/coverImage"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp" />-->
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/ribbon_orange">
+
+                <ImageView
+                    android:id="@+id/book_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/book_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/book_img"
+                    android:text="Book Title"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/author_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/book_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/book_img"
+                    android:paddingBottom="3dp"
+                    android:text="Author"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+
+                <RelativeLayout
+                    android:id="@+id/downloadLayout"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/download_btn_background"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp">
+
+                    <TextView
+                        android:id="@+id/downloadRead"
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:textColor="@color/white"
+                        android:text=""/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

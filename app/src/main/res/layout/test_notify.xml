@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="3dp"
+        android:background="@color/OrangeRed">
+        <ImageView
+            android:id="@+id/backArrowImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_left"/>
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+
+            android:text="Notification Settings"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:layout_toRightOf="@id/backArrowImg"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/notification_scrollview"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_weight="1"
+        android:layout_below="@+id/actionBar"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notificationSoundTV"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Notification Sound"
+                android:textColor="@color/OrangeRed"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/backArrowImg"
+                android:paddingLeft="15sp"/>
+
+
+            <!--Notification Sound-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="12dp"
+                >
+                <TextView
+                    android:id="@+id/notificatonSoundTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Enable Notification Sound"
+                    android:textColor="@color/Black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    />
+                <CheckBox
+                    android:id="@+id/soundCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:theme="@style/MyCheckBox"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/notificationSettings"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Settings"
+                android:textColor="@color/OrangeRed"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/backArrowImg"
+                android:paddingLeft="15sp"/>
+
+            <!--Festival day-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/festivalDayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Festival Days"
+                    android:textColor="@color/Black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/festivalDayNotifyTV"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Notify on festival days"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/counter_text_bg"
+                    android:layout_below="@id/festivalDayTV"
+                    android:textSize="13sp"
+                    />
+                <CheckBox
+                    android:id="@+id/festivalCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:theme="@style/MyCheckBox"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/light_grey_selected"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/festivalDayNotifyTV"
+                />
+
+
+            <!--Prior festival Day-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/priorfestivalDayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Prior Festival Days"
+                    android:textColor="@color/Black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/priorfestivalDayNotifyTV"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Notify on previous day"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/counter_text_bg"
+                    android:layout_below="@id/priorfestivalDayTV"
+                    android:textSize="13sp"
+                    />
+                <CheckBox
+                    android:id="@+id/priorfestivalCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:theme="@style/MyCheckBox"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/light_grey_selected"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/festivalDayNotifyTV"
+                />
+
+
+
+            <!--Auspicious Days-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/auspiciousDayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Auspicious Days"
+                    android:textColor="@color/Black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/auspiciousDayNotifyTV"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Notify on Auspicious days"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/counter_text_bg"
+                    android:layout_below="@id/auspiciousDayTV"
+                    android:textSize="13sp"
+                    />
+                <CheckBox
+                    android:id="@+id/auspiciousCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:theme="@style/MyCheckBox"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/light_grey_selected"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/festivalDayNotifyTV"
+                />
+            <!--Prior Auspicious Days-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/priorauspiciousDayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Prior Auspicious Days"
+                    android:textColor="@color/Black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/priorauspiciousDayNotifyTV"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Notify on previous day"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/counter_text_bg"
+                    android:layout_below="@id/priorauspiciousDayTV"
+                    android:textSize="13sp"
+                    />
+                <CheckBox
+                    android:id="@+id/priorauspiciousCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:theme="@style/MyCheckBox"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/light_grey_selected"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/festivalDayNotifyTV"
+                />
+
+            <!--Kirthigai Days-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/KirthigaiDayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Kirthigai Days"
+                    android:textColor="@color/Black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/KirthigaiDayNotifyTV"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Notify on Kirthigai days"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/counter_text_bg"
+                    android:layout_below="@id/KirthigaiDayTV"
+                    android:textSize="13sp"
+                    />
+                <CheckBox
+                    android:id="@+id/kirthigaiCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:theme="@style/MyCheckBox"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/light_grey_selected"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/festivalDayNotifyTV"
+                />
+
+            <!--Prior Kirthigai Days-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:id="@+id/priorkirthigaiDayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Prior Kirthigai Days"
+                    android:textColor="@color/Black"
+                    android:layout_alignParentTop="true"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/priorkirthigaiDayNotifyTV"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Notify on previous day"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/counter_text_bg"
+                    android:layout_below="@id/priorkirthigaiDayTV"
+                    android:textSize="13sp"
+                    />
+                <CheckBox
+                    android:id="@+id/priorkirthigaiCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:theme="@style/MyCheckBox"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/notication_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal">
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

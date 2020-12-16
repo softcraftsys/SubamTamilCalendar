@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <!-- <android.support.v4.widget.DrawerLayout
+        android:id="@+id/month_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+
+        <include layout="@layout/month_app_bar"/>
+        <!-- Framelayout to display Fragments -->
+        <FrameLayout
+            android:id="@+id/month_frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="80dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/restart_currentmonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:color/transparent"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/restart_textMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="16dp"
+
+                    android:text="@string/today"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="80dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/shareFloatingBtn"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/share_ic"
+                    android:visibility="visible" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- Listview to display slider menu -->
+
+        <!--<ListView
+            android:id="@+id/month_list_slidermenu"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/list_background"
+            android:choiceMode="singleChoice"
+            android:divider="@color/list_divider"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/list_selector"
+            android:scrollbars="none" />-->
+
+
+    <!--</android.support.v4.widget.DrawerLayout>-->
+
+    <ProgressBar
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:id="@+id/progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+</RelativeLayout>

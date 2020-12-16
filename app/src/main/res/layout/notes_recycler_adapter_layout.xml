@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:visibility="visible">-->
+
+
+    <RelativeLayout
+        android:id="@+id/NoteMainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/noteListCardView"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                app:cardBackgroundColor="@color/note_pink_3"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="4dp"
+                app:cardMaxElevation="4dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:id="@+id/noteDateTimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/noteAddedDateAndTimeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_gravity="right"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="21 Feb 2018 ( 6:00 PM )"
+                            android:textSize="10dp"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/reminderDateAndTimeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="right"
+                            android:text="21 Feb 2018 ( 6:00 PM )"
+                            android:textColor="@color/medium_Black"
+                            android:textSize="10dp"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:id="@+id/reminderIcon"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_toLeftOf="@id/reminderDateAndTimeTv"
+                            android:src="@drawable/note_reminder_ic" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/noteDescLayout"
+                        android:gravity="center"
+                        android:layout_above="@id/noteDateTimeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <TextView
+                            android:id="@+id/descNoteTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:text="Having a office meeting"
+                            android:textAlignment="center"
+                            android:textColor="@color/medium_Black"
+                            android:textSize="15dp"
+                            android:textStyle="italic" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_above="@id/noteDescLayout"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/grey" />
+
+                    <RelativeLayout
+                        android:layout_marginBottom="5dp"
+                        android:layout_above="@id/view"
+                        android:id="@+id/noteTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/menuOptionLayout"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/notes_item_selector"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/menuOptionBtn"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/menu_note_ic"
+
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/titleNoteTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Meeting"
+                            android:textColor="@color/medium_Black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/noteOptionsCardView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:visibility="gone"-->
+            <!--app:cardCornerRadius="2dp"-->
+            <!--app:cardElevation="4dp"-->
+            <!--app:cardMaxElevation="4dp"-->
+            <!--app:cardUseCompatPadding="true">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="180dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:visibility="visible">-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/noteEditBtn"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:background="@drawable/notes_item_selector"-->
+            <!--android:padding="7dp"-->
+            <!--android:src="@drawable/edit_note_ic" />-->
+            <!--</RelativeLayout>-->
+
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/noteDeleteBtn"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@drawable/notes_item_selector"-->
+            <!--android:padding="7dp"-->
+            <!--android:src="@drawable/delete_note_ic" />-->
+
+            <!--</RelativeLayout>-->
+
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/noteCancelBtn"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:background="@drawable/notes_item_selector"-->
+            <!--android:padding="7dp"-->
+            <!--android:src="@drawable/cancel_note_ic" />-->
+
+            <!--</RelativeLayout>-->
+
+
+            <!--</LinearLayout>-->
+            <!--</android.support.v7.widget.CardView>-->
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/noteOptionsLayout"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/round_rectangle">
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/noteEditBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:padding="7dp"
+                    android:src="@drawable/note_edit_ic" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/noteDeleteBtn"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="7dp"
+                    android:src="@drawable/note_delete_ic" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/noteCancelBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:padding="7dp"
+                    android:src="@drawable/note_close_ic" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+</RelativeLayout>
+

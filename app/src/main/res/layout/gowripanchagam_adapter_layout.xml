@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <TableRow
+            android:id="@+id/tablerow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="#9966CC"
+            android:paddingBottom="0.7dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="0.7dp">
+
+            <TextView
+
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#9966CC"
+                android:gravity="center"
+                android:text="நேரம்"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="#9966CC"
+                android:gravity="center"
+                android:text="பகல்"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="#9966CC"
+                android:gravity="center"
+                android:text="இரவு"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tablerow"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+
+
+            <TableRow
+                android:background="#9966CC"
+                android:paddingBottom="1dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:id="@+id/neramTV"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/White"
+                    android:gravity="center"
+                    android:text="hai"
+                    android:textColor="@color/Black" />
+
+                <TextView
+                    android:id="@+id/pakalTV"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/White"
+                    android:gravity="center"
+                    android:text="hello"
+                    android:textColor="@color/Black" />
+
+                <TextView
+                    android:id="@+id/nightTV"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/White"
+                    android:gravity="center"
+                    android:text="hai"
+                    android:textColor="@color/Black" />
+
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

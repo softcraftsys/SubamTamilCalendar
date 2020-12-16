@@ -1,0 +1,41 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_small">3dp</dimen>
+    <dimen name="margin_medium">4dp</dimen>
+    <dimen name="margin_large">5dp</dimen>
+    <dimen name="margin_xlarge">7dp</dimen>
+    <dimen name="tab_text_size">7dp</dimen>
+    <dimen name="margin_xxlarge">33dp</dimen>
+    <dimen name="list_divider_height">1.5dp</dimen>
+    <dimen name="calendar_grid_image">8dp</dimen>
+    <dimen name="calendar_grid_engText">16dp</dimen>
+    <dimen name="calendar_grid_tamilText">8dp</dimen>
+
+    <dimen name="calendar_grid_tamildayText">3dp</dimen>
+    <dimen name="calendar_header_tamilText">10dp</dimen>
+    <dimen name="calendar_special_imagesize">8dp</dimen>
+    <dimen name="calendar_grid_specialdayfooter">8dp</dimen>
+    <dimen name="calendar_grid_header_height">10dp</dimen>
+    <dimen name="calendar_monthly_image_margin">15dp</dimen>
+    <dimen name ="daily_top_space">1dp</dimen>
+    <dimen name ="daily_thought_space">1dp</dimen>
+    <dimen name="margin_very_small">1dp</dimen>
+    <dimen name="margin_inbetween_small">2dp</dimen>
+    <dimen name="daily_general_txt_size">12sp</dimen>
+    <dimen name="daily_tamil_name_txt_size">14sp</dimen>
+
+    <!-- modified for gird Cells-->
+    <dimen name="calendar_grid_cells_height">10dp</dimen>
+
+    <dimen name="month_side_header">5dp</dimen>
+    <dimen name="daily_dateone">55sp</dimen>
+
+    <bool name="isTablet">false</bool>
+</resources>

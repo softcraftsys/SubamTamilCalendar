@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/viewNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/nameTitleTv"
+                    android:textColor="@color/Black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/title_name"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/nameResultTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginRight="11dp"
+                    android:textSize="16dp"
+                    android:layout_toRightOf="@id/nameTitleTv"
+                    android:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/meaningTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/title_meaning"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/Black"
+                    android:paddingTop="8dp"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/meaningResultTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginRight="11dp"
+                    android:textSize="16dp"
+                    android:layout_toRightOf="@id/meaningTitleTv"
+                    android:text="" />
+            </RelativeLayout>
+
+            <View
+                android:background="@color/light_grey_selected"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

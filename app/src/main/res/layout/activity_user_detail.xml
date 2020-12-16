@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/userinfo_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/userinfo_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:lineSpacingExtra="10dp"
+                android:text="@string/user_welcome_txt"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/user_info_item_rounded_rectangle">
+
+                <ImageView
+                    android:id="@+id/userIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/user" />
+
+                <EditText
+                    android:textSize="14dp"
+                    android:id="@+id/userNameEdtTv"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/userIcon"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:hint="பெயர்"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_trans" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/user_info_item_rounded_rectangle">
+
+                <ImageView
+                    android:id="@+id/userDobIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/userdetail_calendar_icon" />
+
+                <EditText
+                    android:focusable="false"
+                    android:textSize="14dp"
+                    android:id="@+id/userDobEdtTv"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/userDobIcon"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:hint="பிறந்த தேதி"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_trans" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/user_info_item_rounded_rectangle">
+
+                <ImageView
+                    android:id="@+id/userRasiIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/horoscope_deselected" />
+
+                <EditText
+                    android:focusable="false"
+                    android:textSize="14dp"
+                    android:id="@+id/userRasiEdtTv"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/userRasiIcon"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:hint="உங்கள் ராசி"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_trans" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/user_info_item_rounded_rectangle">
+
+                <ImageView
+                    android:id="@+id/userStarIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/star_deselected" />
+
+                <EditText
+                    android:focusable="false"
+                    android:textSize="14dp"
+                    android:id="@+id/userStarEdtTv"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/userStarIcon"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:hint="உங்கள் நட்சத்திரம்"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_trans" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/userInfoSkipBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="தவிர்"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/userInfoOkBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="53dp"
+                    android:layout_toRightOf="@id/userInfoSkipBtn"
+                    android:background="@drawable/userinfo_ok_btn_rounded"
+                    android:text="சரி"
+                    android:textColor="@color/OrangeRed"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/RaasiNatchaMainLayout"
+        android:background="@color/semi_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/natchathiram"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+            <TextView
+                android:textColor="@color/OrangeRed"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:id="@+id/RasiTitleTv"
+                android:layout_centerHorizontal="true"
+                android:text="உங்கள் ராசி"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RaasiRecyclerView"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/NatchathiramRecyclerView"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

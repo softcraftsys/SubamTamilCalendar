@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/Snow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/tablerowManaiLayout"
+            android:paddingLeft="1dp"
+            android:paddingTop="0.5dp"
+            android:paddingRight="1dp"
+            android:paddingBottom="0.5dp"
+            android:background="@color/app_purple">
+            <TextView
+                android:id="@+id/manai_no"
+                android:gravity="center"
+                android:text="hai"
+                android:padding="5dp"
+                android:background="@color/White"
+                android:textColor="@color/Black"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/mani_detail"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="5"
+                android:padding="5dp"
+                android:text="hello"
+                android:textColor="@color/Black"
+                android:background="@color/White"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

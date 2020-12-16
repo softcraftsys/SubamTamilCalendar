@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/about_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:elevation="3dp"
+            android:background="@color/OrangeRed">
+            <ImageView
+                android:id="@+id/about_imgback"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_left"
+                android:contentDescription="TODO" />
+            <TextView
+                android:id="@+id/show_title_aboutus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:layout_toRightOf="@id/about_imgback"/>
+        </RelativeLayout>
+        <ScrollView
+            android:layout_above="@+id/adview"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/about_header_layout"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingBottom="10dp"
+                android:id="@+id/toprelative"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content">
+                <View
+                    android:layout_height="5dp"
+                    android:layout_width="fill_parent"
+                    android:id="@+id/first_view" />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_below="@+id/first_view"
+                    android:id="@+id/supporttxt1"
+                    android:text="@string/app_name_aboutus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="23dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="5dp"
+                    />
+                <TextView
+                    android:layout_marginRight="15dp"
+                    android:layout_below="@+id/supporttxt1"
+                    android:gravity="center"
+                    android:id="@+id/supporttxt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_below="@+id/supporttxt2"
+                    android:id="@+id/develop"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Developed By : Softcraft Systems and Solutions"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true" />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:text="hai"
+                    android:id="@+id/contents"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/develop"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_below="@+id/contents"
+                    android:id="@+id/imag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_aboutus_company_logo"
+                    android:layout_marginLeft="90dp"
+                    android:layout_gravity="bottom|center"
+                    />
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/mailtext"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/imag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Email:"
+                    android:gravity="center"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:id="@+id/mail"
+                    android:layout_below="@id/imag"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_toRightOf="@+id/mailtext"
+                    android:text="@string/Mail_Id"
+                    android:gravity="center"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:id="@+id/websitetext"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@id/mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Website:"
+                    android:gravity="center"/>
+                <TextView
+                    android:textSize="16sp"
+                    android:linksClickable="true"
+                    android:id="@+id/websiteid"
+                    android:layout_below="@id/mail"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_toRightOf="@+id/mailtext"
+                    android:text="@string/Website_Id"
+                    android:gravity="center"/>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_below="@+id/websiteid"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <Button
+                            android:id="@+id/btnrate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rate the app"
+                            android:background="@drawable/heading_selector"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:layout_centerHorizontal="true"
+                            android:textSize="16dp"
+                            />
+                        <Button
+                            android:id="@+id/facebook"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Share the App"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/heading_selector"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:layout_weight="1"
+                            android:layout_centerHorizontal="true"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <Button
+                            android:id="@+id/maildeveloper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mail to Developer"
+                            android:textSize="16dp"
+                            android:background="@drawable/heading_selector"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:layout_margin="4dp"
+                            android:layout_centerHorizontal="true"
+                            />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <Button
+                            android:id="@+id/ourapp"
+                            android:background="@drawable/heading_selector"
+                            android:textColor="@color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Our Apps"
+                            android:textSize="16dp"
+                            android:layout_margin="4dp"
+                            android:layout_centerHorizontal="true"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+<!--
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_below="@+id/websiteid"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnrate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Rate the app!"
+                        android:textAllCaps="false"
+                        android:layout_below="@id/websiteid"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        />
+
+                    <Button
+                        android:id="@+id/mailfriend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Refer your friends!"
+                        android:textSize="18dp"
+                        android:textAllCaps="false"
+                        android:layout_below="@id/btnrate"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:textStyle="bold"
+                        />
+
+                    <Button
+                        android:id="@+id/maildeveloper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mail to Developer!"
+                        android:textSize="18dp"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/mailfriend"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        />
+
+                    <Button
+                        android:id="@+id/facebook"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share the App!"
+                        android:textSize="16dp"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/maildeveloper"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        />
+
+                    <Button
+                        android:id="@+id/ourapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Our Apps!"
+                        android:textSize="16dp"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/facebook"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+-->
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:id="@+id/adview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center_horizontal"
+            android:layout_gravity="bottom"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

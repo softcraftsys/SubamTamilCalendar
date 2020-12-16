@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/White"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="3dp"
+        android:background="@color/OrangeRed">
+
+        <ImageView
+            android:id="@+id/rasipalan_backArrowImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_left"/>
+        <TextView
+            android:id="@+id/rasipalan_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:layout_toRightOf="@id/rasipalan_backArrowImg"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/grid_relative"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <GridView
+            android:numColumns="auto_fit"
+            android:gravity="center"
+            android:columnWidth="100dp"
+            android:stretchMode="columnWidth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/grid" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rasipalan_adview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <!--<GridView
+        android:id="@+id/grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:numColumns="auto_fit"
+        android:columnWidth="90dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:gravity="center"
+        android:stretchMode="columnWidth" >
+
+    </GridView>-->
+
+</LinearLayout>
