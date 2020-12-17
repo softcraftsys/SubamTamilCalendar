@@ -117,8 +117,8 @@ public class DayActivity extends AppCompatActivity implements DayAdapter.IMethod
     ImageView gridMenu;
     View circlePG;
     protected int HelpImageTime = 5000;
-    private LocationManager locationManager;
-    private LocationListener locationListener;
+//    private LocationManager locationManager;
+//    private LocationListener locationListener;
     private Geocoder geocoder;
     LinearLayout weatherLayout;
     TextView wLocation, wCondition, wTemp, tToolbartitle;
@@ -215,7 +215,7 @@ public class DayActivity extends AppCompatActivity implements DayAdapter.IMethod
     private void getWeatherAndSetFunc() {
         try {
             if (isNetworkStatusAvialable(getApplicationContext())) {
-                getLocationFromLocationManager();
+//                getLocationFromLocationManager();
             } else {
 
             }
@@ -522,7 +522,7 @@ public class DayActivity extends AppCompatActivity implements DayAdapter.IMethod
                         MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.getCityName, sentCity);
                         MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.getCountryCode, sentCountryCode);
                         MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.getPostalCode, sentPostalCode);
-                        new GetWeather().execute();
+//                        new GetWeather().execute();
                     }
                 }
             }
@@ -533,69 +533,69 @@ public class DayActivity extends AppCompatActivity implements DayAdapter.IMethod
         }
         return getAddress;
     }
-
-    private void setWeather() {
-        try {
-            String isLocation = MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strLocation);
-            String isCondition = MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strCondition);
-            String isTemp = MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strTemp);
-            if (isLocation != null && isCondition != null && isTemp != null && !isLocation.equalsIgnoreCase("") && !isCondition.equalsIgnoreCase("") && !isTemp.equalsIgnoreCase("")) {
-                try {
-                    setWeatherText();
-                    isFirst = true;
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else {
-                final Handler handler = new Handler();
-                Runnable r = new Runnable() {
-                    public void run() {
-                        try {
-                            if (isNetworkStatusAvialable(getApplicationContext())) {
-                                Boolean hasWeather = getLocationAddress();
-                                if (hasWeather) {
-                                    setWeather();
-                                }
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-                handler.postDelayed(r, 10000);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void setWeatherText() {
-        try {
-            Handler handler = new Handler();
-            Runnable r = new Runnable() {
-                public void run() {
-                    if (animflag == false) {
-                        show = AnimationUtils.loadAnimation(DayActivity.this, R.anim.lef_to_right);
-                        animflag = true;
-                    } else {
-                        show = AnimationUtils.loadAnimation(DayActivity.this, R.anim.right_to_left);
-                        animflag = false;
-                    }
-                    wLocation.setText(MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strLocation));
-                    wCondition.setText(MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strCondition));
-                    wTemp.setText(MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strTemp));
-                    if (weatherLayout != null) {
-                        weatherLayout.startAnimation(show);
-                    }
-                    setWeatherText();
-                }
-            };
-            handler.postDelayed(r, 10000);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//
+//    private void setWeather() {
+//        try {
+//            String isLocation = MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strLocation);
+//            String isCondition = MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strCondition);
+//            String isTemp = MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strTemp);
+//            if (isLocation != null && isCondition != null && isTemp != null && !isLocation.equalsIgnoreCase("") && !isCondition.equalsIgnoreCase("") && !isTemp.equalsIgnoreCase("")) {
+//                try {
+//                    setWeatherText();
+//                    isFirst = true;
+//
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            } else {
+//                final Handler handler = new Handler();
+//                Runnable r = new Runnable() {
+//                    public void run() {
+//                        try {
+//                            if (isNetworkStatusAvialable(getApplicationContext())) {
+//                                Boolean hasWeather = getLocationAddress();
+//                                if (hasWeather) {
+//                                    setWeather();
+//                                }
+//                            }
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                };
+//                handler.postDelayed(r, 10000);
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    private void setWeatherText() {
+//        try {
+//            Handler handler = new Handler();
+//            Runnable r = new Runnable() {
+//                public void run() {
+//                    if (animflag == false) {
+//                        show = AnimationUtils.loadAnimation(DayActivity.this, R.anim.lef_to_right);
+//                        animflag = true;
+//                    } else {
+//                        show = AnimationUtils.loadAnimation(DayActivity.this, R.anim.right_to_left);
+//                        animflag = false;
+//                    }
+//                    wLocation.setText(MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strLocation));
+//                    wCondition.setText(MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strCondition));
+//                    wTemp.setText(MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.strTemp));
+//                    if (weatherLayout != null) {
+//                        weatherLayout.startAnimation(show);
+//                    }
+//                    setWeatherText();
+//                }
+//            };
+//            handler.postDelayed(r, 10000);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     private void setNativeSmall() {
         try {
@@ -1106,62 +1106,62 @@ public class DayActivity extends AppCompatActivity implements DayAdapter.IMethod
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case 10:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        return;
-                    }
-                    locationManager.requestLocationUpdates(
-                            LocationManager.NETWORK_PROVIDER,
-                            MIN_TIME_BW_UPDATE,
-                            MIN_DISTANCE_CHANGE_FOR_UPDATE, locationListener);
-                }
-                break;
-        }
-        return;
-    }
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+//        switch (requestCode) {
+//            case 10:
+//                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//                        return;
+//                    }
+//                    locationManager.requestLocationUpdates(
+//                            LocationManager.NETWORK_PROVIDER,
+//                            MIN_TIME_BW_UPDATE,
+//                            MIN_DISTANCE_CHANGE_FOR_UPDATE, locationListener);
+//                }
+//                break;
+//        }
+//        return;
+//    }
 
 
-    private void getLocationFromLocationManager() {
-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, this);
-
-
-        locationListener = new LocationListener() {
-            @Override
-            public void onLocationChanged(Location location) {
-                getAddress(location);
-            }
-
-            @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
-
-            @Override
-            public void onProviderEnabled(String provider) {
-            }
-
-            @Override
-            public void onProviderDisabled(String provider) {
-                startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-            }
-        };
-
-    }
+//    private void getLocationFromLocationManager() {
+//        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+//
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            //    ActivityCompat#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            //                                          int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for ActivityCompat#requestPermissions for more details.
+//            return;
+//        }
+//        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 5, this);
+//
+//
+//        locationListener = new LocationListener() {
+//            @Override
+//            public void onLocationChanged(Location location) {
+//                getAddress(location);
+//            }
+//
+//            @Override
+//            public void onStatusChanged(String provider, int status, Bundle extras) {
+//            }
+//
+//            @Override
+//            public void onProviderEnabled(String provider) {
+//            }
+//
+//            @Override
+//            public void onProviderDisabled(String provider) {
+//                startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+//            }
+//        };
+//
+//    }
 
     private void getAddress(Location location) {
         try {
@@ -1177,167 +1177,167 @@ public class DayActivity extends AppCompatActivity implements DayAdapter.IMethod
             MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.getCityName, sentCity);
             MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.getCountryCode, sentCountryCode);
             MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.getPostalCode, sentPostalCode);
-            new GetWeather().execute();
+//            new GetWeather().execute();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
-    private class GetWeather extends android.os.AsyncTask<String, Void, String> {
-        @Override
-        protected void onPreExecute() {
-            try {
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        @Override
-        protected String doInBackground(String... params) {
-            arrayListad = new ArrayList<>();
-            try {
-                if (MiddlewareInterface.isNetworkStatusAvialable(getApplicationContext())) {
-                    Map<String, String> paramss = new HashMap<String, String>();
-                    Date strdate = new Date();
-                    String crntDate = new SimpleDateFormat("yyyy-M-d").format(strdate);
-                    if (!sentCountryCode.equalsIgnoreCase("") && !crntDate.equalsIgnoreCase("") && !MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.getCityName).equalsIgnoreCase("")) {
-                        paramss.put("bundleid", PACKAGE_NAME);
-                        paramss.put("version", version);
-                        paramss.put("deviceos", "Android");
-                        paramss.put("currentccode", sentCountryCode);
-                        paramss.put("currentdate", crntDate);
-                        paramss.put("currentcity", MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.getPostalCode));
-                    }
-                    try {
-                        post(adintegrationapi, paramss);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    if (exceptionValue == 200) {
-                        SharedPreferences app_preferences1 = PreferenceManager.getDefaultSharedPreferences(DayActivity.this);
-                        SharedPreferences.Editor editor = app_preferences1.edit();
-                        editor.putString("adresponse", strRet);
-                        editor.apply();
-                        SharedPreferences app_preferences = PreferenceManager.getDefaultSharedPreferences(DayActivity.this);
-                        String adresponse = app_preferences.getString("adresponse", strRet);
-                        JSONObject responsedash = new JSONObject(adresponse);
-                        if (responsedash.has("weatherdata")) {
-                            JSONObject weatherAd = responsedash.getJSONObject("weatherdata");
-                            String wDate = "", wCity = "", wCountrycode = "", wHumidity = "", wUpdatedtime = "", wWinddiretiontext = "", wWinddirectiondegree = "", wDaydatetime = "", wPressure = "", wWindspeed = "", wWinddirection = "", wWinddegree = "", wTemperature = "", wCondition = "", wImage = "";
-                            if (weatherAd.has("city")) {
-                                wCity = weatherAd.getString("city");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strLocation, wCity);
-                            }
-                            if (weatherAd.has("updatedtime")) {
-                                wUpdatedtime = weatherAd.getString("updatedtime");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strUpdatedTime, wUpdatedtime);
-                            }
-                            if (weatherAd.has("daydatetime")) {
-                                wDaydatetime = weatherAd.getString("daydatetime");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDayDateTime, wDaydatetime);
-                            }
-                            if (weatherAd.has("humidity")) {
-                                wHumidity = weatherAd.getString("humidity");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strHumidity, wHumidity);
-                            }
-                            if (weatherAd.has("pressure")) {
-                                wPressure = weatherAd.getString("pressure");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strPressure, wPressure);
-                            }
-                            if (weatherAd.has("windspeed")) {
-                                wWindspeed = weatherAd.getString("windspeed");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strWind, wWindspeed);
-                            }
-                            if (weatherAd.has("winddirectiontext")) {
-                                wWinddiretiontext = weatherAd.getString("winddirectiontext");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strWindDirection, wWinddiretiontext);
-                            }
-                            if (weatherAd.has("winddirectiondegree")) {
-                                wWinddirectiondegree = weatherAd.getString("winddirectiondegree");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strWindDeg, wWinddirectiondegree);
-                            }
-                            if (weatherAd.has("temperature")) {
-                                try {
-                                    wTemperature = weatherAd.getString("temperature");
-                                    String[] gettemp = wTemperature.split("\\°");
-                                    String splittemp = gettemp[0];
-                                    int convertInt = Integer.parseInt(splittemp);
-                                    int celciuos = (convertInt - 32);
-                                    int celciuos1 = (celciuos * 5);
-                                    String getcelciuos = String.valueOf(celciuos1 / 9) + "°C";
-                                    MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strTemp, getcelciuos);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                            if (weatherAd.has("weathertext")) {
-                                wCondition = weatherAd.getString("weathertext");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strCondition, wCondition);
-                            }
-                            if (weatherAd.has("weatherimage")) {
-                                wImage = weatherAd.getString("weatherimage");
-                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strImage, wImage);
-                            }
-
-                            if (weatherAd.has("forecastdata")) {
-                                JSONArray foreCastArr = weatherAd.getJSONArray("forecastdata");
-                                for (int i = 0; i < foreCastArr.length(); i++) {
-                                    try {
-                                        JSONObject forecastObj = foreCastArr.getJSONObject(i);
-
-                                        ArrayList<String> forecastArrList = new ArrayList<>();
-
-                                        String forecastlow = forecastObj.getString("forecastlow");
-
-                                        String forecastdate = forecastObj.getString("forecastdate");
-
-                                        String forecasthigh = forecastObj.getString("forecasthigh");
-
-                                        String forecastday = forecastObj.getString("forecastday");
-
-                                        String forecastimage = forecastObj.getString("forecastimage");
-
-                                        String forecasttext = forecastObj.getString("forecasttext");
-
-                                        if (i == 0) {
-                                            String day1 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
-                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay1, day1);
-                                        } else if (i == 1) {
-                                            String day2 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
-                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay2, day2);
-                                        } else if (i == 2) {
-                                            String day3 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
-                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay3, day3);
-                                        } else if (i == 3) {
-                                            String day4 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
-                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay4, day4);
-                                        }
-
-                                    } catch (Exception e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                }
-            } catch (Exception e) {
-                Log.e("HttpManager", "ClientProtocolException thrown" + e);
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(String result) {
-            try {
-                setWeather();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
+//    private class GetWeather extends android.os.AsyncTask<String, Void, String> {
+//        @Override
+//        protected void onPreExecute() {
+//            try {
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        @Override
+//        protected String doInBackground(String... params) {
+//            arrayListad = new ArrayList<>();
+//            try {
+//                if (MiddlewareInterface.isNetworkStatusAvialable(getApplicationContext())) {
+//                    Map<String, String> paramss = new HashMap<String, String>();
+//                    Date strdate = new Date();
+//                    String crntDate = new SimpleDateFormat("yyyy-M-d").format(strdate);
+//                    if (!sentCountryCode.equalsIgnoreCase("") && !crntDate.equalsIgnoreCase("") && !MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.getCityName).equalsIgnoreCase("")) {
+//                        paramss.put("bundleid", PACKAGE_NAME);
+//                        paramss.put("version", version);
+//                        paramss.put("deviceos", "Android");
+//                        paramss.put("currentccode", sentCountryCode);
+//                        paramss.put("currentdate", crntDate);
+//                        paramss.put("currentcity", MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).getString(MiddlewareInterface.getPostalCode));
+//                    }
+//                    try {
+//                        post(adintegrationapi, paramss);
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    if (exceptionValue == 200) {
+//                        SharedPreferences app_preferences1 = PreferenceManager.getDefaultSharedPreferences(DayActivity.this);
+//                        SharedPreferences.Editor editor = app_preferences1.edit();
+//                        editor.putString("adresponse", strRet);
+//                        editor.apply();
+//                        SharedPreferences app_preferences = PreferenceManager.getDefaultSharedPreferences(DayActivity.this);
+//                        String adresponse = app_preferences.getString("adresponse", strRet);
+//                        JSONObject responsedash = new JSONObject(adresponse);
+//                        if (responsedash.has("weatherdata")) {
+//                            JSONObject weatherAd = responsedash.getJSONObject("weatherdata");
+//                            String wDate = "", wCity = "", wCountrycode = "", wHumidity = "", wUpdatedtime = "", wWinddiretiontext = "", wWinddirectiondegree = "", wDaydatetime = "", wPressure = "", wWindspeed = "", wWinddirection = "", wWinddegree = "", wTemperature = "", wCondition = "", wImage = "";
+//                            if (weatherAd.has("city")) {
+//                                wCity = weatherAd.getString("city");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strLocation, wCity);
+//                            }
+//                            if (weatherAd.has("updatedtime")) {
+//                                wUpdatedtime = weatherAd.getString("updatedtime");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strUpdatedTime, wUpdatedtime);
+//                            }
+//                            if (weatherAd.has("daydatetime")) {
+//                                wDaydatetime = weatherAd.getString("daydatetime");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDayDateTime, wDaydatetime);
+//                            }
+//                            if (weatherAd.has("humidity")) {
+//                                wHumidity = weatherAd.getString("humidity");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strHumidity, wHumidity);
+//                            }
+//                            if (weatherAd.has("pressure")) {
+//                                wPressure = weatherAd.getString("pressure");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strPressure, wPressure);
+//                            }
+//                            if (weatherAd.has("windspeed")) {
+//                                wWindspeed = weatherAd.getString("windspeed");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strWind, wWindspeed);
+//                            }
+//                            if (weatherAd.has("winddirectiontext")) {
+//                                wWinddiretiontext = weatherAd.getString("winddirectiontext");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strWindDirection, wWinddiretiontext);
+//                            }
+//                            if (weatherAd.has("winddirectiondegree")) {
+//                                wWinddirectiondegree = weatherAd.getString("winddirectiondegree");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strWindDeg, wWinddirectiondegree);
+//                            }
+//                            if (weatherAd.has("temperature")) {
+//                                try {
+//                                    wTemperature = weatherAd.getString("temperature");
+//                                    String[] gettemp = wTemperature.split("\\°");
+//                                    String splittemp = gettemp[0];
+//                                    int convertInt = Integer.parseInt(splittemp);
+//                                    int celciuos = (convertInt - 32);
+//                                    int celciuos1 = (celciuos * 5);
+//                                    String getcelciuos = String.valueOf(celciuos1 / 9) + "°C";
+//                                    MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strTemp, getcelciuos);
+//                                } catch (Exception e) {
+//                                    e.printStackTrace();
+//                                }
+//                            }
+//                            if (weatherAd.has("weathertext")) {
+//                                wCondition = weatherAd.getString("weathertext");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strCondition, wCondition);
+//                            }
+//                            if (weatherAd.has("weatherimage")) {
+//                                wImage = weatherAd.getString("weatherimage");
+//                                MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strImage, wImage);
+//                            }
+//
+//                            if (weatherAd.has("forecastdata")) {
+//                                JSONArray foreCastArr = weatherAd.getJSONArray("forecastdata");
+//                                for (int i = 0; i < foreCastArr.length(); i++) {
+//                                    try {
+//                                        JSONObject forecastObj = foreCastArr.getJSONObject(i);
+//
+//                                        ArrayList<String> forecastArrList = new ArrayList<>();
+//
+//                                        String forecastlow = forecastObj.getString("forecastlow");
+//
+//                                        String forecastdate = forecastObj.getString("forecastdate");
+//
+//                                        String forecasthigh = forecastObj.getString("forecasthigh");
+//
+//                                        String forecastday = forecastObj.getString("forecastday");
+//
+//                                        String forecastimage = forecastObj.getString("forecastimage");
+//
+//                                        String forecasttext = forecastObj.getString("forecasttext");
+//
+//                                        if (i == 0) {
+//                                            String day1 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
+//                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay1, day1);
+//                                        } else if (i == 1) {
+//                                            String day2 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
+//                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay2, day2);
+//                                        } else if (i == 2) {
+//                                            String day3 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
+//                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay3, day3);
+//                                        } else if (i == 3) {
+//                                            String day4 = forecastlow + "#" + forecastdate + "#" + forecasthigh + "#" + forecastday + "#" + forecastimage + "#" + forecasttext;
+//                                            MiddlewareInterface.SharedPreferenceUtility.getInstance(DayActivity.this).putString(MiddlewareInterface.strDay4, day4);
+//                                        }
+//
+//                                    } catch (Exception e) {
+//                                        e.printStackTrace();
+//                                    }
+//                                }
+//
+//                            }
+//                        }
+//                    }
+//                }
+//            } catch (Exception e) {
+//                Log.e("HttpManager", "ClientProtocolException thrown" + e);
+//            }
+//            return null;
+//        }
+//
+//        @Override
+//        protected void onPostExecute(String result) {
+//            try {
+//                setWeather();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
     public static void post(String endpoint, Map<String, String> params) throws IOException {
         URL url;
